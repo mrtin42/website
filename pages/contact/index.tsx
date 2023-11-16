@@ -70,16 +70,18 @@ export default function Contact() {
                 </header>
                 <div className={styles.wrapper}>
                     <div className={styles.grid}>
-                        <FlipCard frontContent={
-                            <div className={styles.card}>
-                                <h2 className={styles.cardtitle}>email</h2>
-                            </div>
-                        } backContent={
-                            <div className={styles.card}>
-                                <h2 className={styles.cardtitle}>email</h2>
-                                <p className={styles.cardtext}>you can email me at <a href="mailto:martin@mbfrias.co.uk" className="link">martin@mbfrias.co.uk</a></p>
-                            </div>
-                        }
+                        <FlipCard
+                            frontContent={
+                                <div className={styles.card}>
+                                    <h2 className={styles.cardtitle}>email</h2>
+                                </div>
+                            }
+                            backContent={
+                                <div className={styles.card}>
+                                    <h2 className={styles.cardtitle}>email</h2>
+                                    <p className={styles.cardtext}>you can email me at <a href="mailto:martin@mbfrias.co.uk" className="link">martin@mbfrias.co.uk</a></p>
+                                </div>
+                            }
                         />
                     </div>
                 </div>
