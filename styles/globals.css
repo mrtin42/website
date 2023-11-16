@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Inconsolata:wght@300&family=Unbounded:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css?family=Inter');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,11 +24,119 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background: url(/bg_v2.png) #5c1919;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-stretch: ultra-expanded;
 }
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: +1;
+    font-family: 'Inconsolata', monospace;
+}
+
+.navbar ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #f00;
+}
+
+/* animated glitching text effect on .glitch */
+
+.glitch {
+  font-weight: bold;
+  position: relative;
+  text-shadow: 0.05em 0 0 #0000ff, -0.03em -0.04em 0 #ff0000,
+    0.025em 0.04em 0 #00ff00;
+  animation: glitch 725ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #0000ff, -0.03em -0.04em 0 #ff0000,
+      0.025em 0.04em 0 #00ff00;
+  }
+  15% {
+    text-shadow: 0.05em 0 0 #0000ff, -0.03em -0.04em 0 #ff0000,
+      0.025em 0.04em 0 #00ff00;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #0000ff, 0.025em 0.035em 0 #ff0000,
+      -0.05em -0.05em 0 #00ff00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #0000ff, 0.025em 0.035em 0 #ff0000,
+      -0.05em -0.05em 0 #00ff00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #0000ff, 0.03em 0 0 #ff0000,
+      0 -0.04em 0 #00ff00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #0000ff, 0.03em 0 0 #ff0000,
+      0 -0.04em 0 #00ff00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #0000ff, -0.025em -0.04em 0 #ff0000,
+      -0.04em -0.025em 0 #00ff00;
+  }
+}
+
+/* end of animated glitching text effect on .glitch */
+

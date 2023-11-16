@@ -1,118 +1,155 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Head from 'next/head'
+import Script from 'next/script'
+import Link from 'next/link'
+import styles from '@/styles/Home.module.css'
+import { Inter, Inconsolata, Unbounded } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+const inconsolata = Inconsolata({ subsets: ['latin'] })
+const unbounded = Unbounded({ subsets: ['latin'] })
+
+var open: string | null = null;
+
+export function openPopup(id: string) {
+  // Close the current popup if one is open
+  if (open) {
+    closePopup(open);
+  }
+
+  // Show the specified popup
+  const showThis = document.getElementById(id);
+  if (showThis) {
+    showThis.classList.add(styles.active);
+    open = id;
+  }
+}
+
+export function closePopup(id: string) {
+  // Hide the specified popup by removing the "active" class
+  const closeThis = document.getElementById(id);
+  if (closeThis) {
+    closeThis.classList.remove(styles.active);
+    open = null;
+  }
+}
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+        <title>MAЯTÍN</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Inconsolata:wght@300&family=Unbounded:wght@900&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:wght@300&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" />
+        <meta name="description" content="i am a web developer im so cool!!! also i really really like trains" />
+        <meta name="theme-color" content="#19327d" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="MAЯTÍN" />
+        <meta name="keywords" content='web, developer, web developer, trains, code, martin, tube' />
+        <meta name="author" content="MAЯTÍN" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="google" content="notranslate" />
+        <meta name="google" content="nositelinkssearchbox" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="rating" content="general" />
+        <meta name="distribution" content="global" />
+        <meta name="audience" content="all" />
+        <meta name="msapplication-TileColor" content="#19327d" />
+        <meta name="generator" content="MAЯTÍN using Next.js" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@t_ub3" />
+        <meta name="twitter:creator" content="@t_ub3" />
+        <meta name="twitter:title" content="MAЯTÍN" />
+        <meta name="twitter:description" content="i am a web developer im so cool!!! also i really really like trains" />
+        <meta name="twitter:image" content="https://marrtin.com/og.png" />
+        <meta name="twitter:image:src" content="https://marrtin.com/og.png" />
+        <meta property="og:url" content="https://marrtin.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="MAЯTÍN" />
+        <meta property="og:description" content="i am a web developer im so cool!!! also i really really like trains" />
+        <meta property="og:image" content="https://marrtin.com/og.png" />
+        <meta property="og:image:secure_url" content="https://marrtin.com/og.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <link rel="manifest" href="/manifest.json" />
+      </Head>
+      <div>
+        <nav className='navbar'>
+          <ul>
+            <li><a href="./" className="page-link glitch">home</a></li>
+            <li><a href="./projects" className="page-link">projects</a></li>
+            <li><a href="./contact" className="page-link">contact</a></li>
+            <li><a href="./domains" className="page-link">domains</a></li>
+          </ul>
+        </nav>
+        <div className={styles.container}>
+          <main className={styles.main}>
+            <div className={styles.name}>
+              <h1 className={[unbounded.className, 'glitch'].join(' ')}>
+                <span aria-hidden="true">MAЯTÍN</span>
+                MAЯTÍN
+                <span aria-hidden="true">MAЯTÍN</span>
+              </h1>
+              <div className={styles.sectionbuttons}>
+                <button className={styles.sectionopener} id="about" onClick={() => openPopup('aboutpopup')}>about</button>
+                <button className={styles.sectionopener} id="skills" onClick={() => openPopup('skillspopup')}>projects</button>
+                <button className={styles.sectionopener} id="testimonials" onClick={() => openPopup('testimonialspopup')}>testimonials</button>
+              </div>
+            </div>
+            {/* Why is Minecraft Music so depressing? I don’t fully understand it, I’ll listen to songs like Mice on Venus or Dry Hands and want so sit in a corner and just let my motions overwhelm me, and I’m not a depressed person by what I know. Is it memories? Is it a certain combination of pitch & volume that makes the brain sad? I know it’s not just a sad song, because no other “sad songs” make me feel NEAR what C418 does. If there is anyone who has an answer, just please let me know. */}
+            <div className={styles.popup} id="aboutpopup">
+              <div className={styles.popupcontent}>
+                <h2 className={styles.popuptitle}>about</h2>
+                <p className={styles.popupdescription}>
+                  15 year old javascript/typescript developer - i make websites and discord bots
+                  <br />
+                  i really like trains and i also like to play minecraft
+                  <br />
+                  born in chile, raised and living in the uk
+                </p>
+                <button className={styles.popupclose} onClick={() => closePopup('aboutpopup')}>close</button>
+              </div>
+            </div>
+            <div className={styles.popup} id="skillspopup">
+              <div className={styles.popupcontent}>
+                <h2 className={styles.popuptitle}>skills</h2>
+                <p className={styles.popupdescription}>
+                  i mainly do web development which means im proficient in typescript, javascript, html, css, and react
+                  <br />
+                  i also know python and sql (blame the uk education curriculum) and can use them to a decent level
+                  <br />
+                  im an expert in the DNS protocol and can configure DNS servers and records
+                </p>
+                <button className={styles.popupclose} onClick={() => closePopup('skillspopup')}>close</button>
+              </div>
+            </div>
+            <div className={styles.popup} id="testimonialspopup">
+                <div className={styles.popupcontent}>
+                  <h2 className={styles.popuptitle}>testimonials</h2>
+                  <p className={styles.popupdescription}>
+                    "this lads coding skills are insane" - some random kid at my school whos never seen a computer before in his life (probably)
+                    <br />
+                    "martin ur development skills are so amazing and awesome and they give me great joy i love how you develop so skilfully and your website is awesome" - ven, an eddsworld fan
+                    <br />
+                    "thats proper splendid" - a guy from stoke-on-trent that i know whos literally the GOAT
+                    <br />
+                    "eat some chocolate chocolate chip" - Joseph Robinette Biden Jr, 46th President of the United States of America
+                  </p>
+                  <button className={styles.popupclose} onClick={() => closePopup('testimonialspopup')}>close</button>
+                </div>
+              </div>
+          </main>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   )
 }

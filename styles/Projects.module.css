@@ -1,0 +1,75 @@
+.main {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+}
+
+.title {
+    font-size: 5rem;
+    font-family: 'Assistant', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.description {
+    font-size: 1.5rem;
+    font-family: 'Assistant', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    width: 80%;
+}
+
+.belowbox {
+    color: whitesmoke;
+    font-family: 'Assistant', sans-serif;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.boxurl {
+    color: #fff;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: dotted underline;
+    transition: all 0.3s ease;
+}
+
+.boxurl:hover {
+    text-decoration: solid underline;
+}
