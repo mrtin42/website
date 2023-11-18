@@ -1,16 +1,21 @@
 import nodemailer from 'nodemailer';
-import rateLimit from 'express-rate-limit';
 import fs from 'fs';
 import path from 'path';
+import rateLimit from '@/utils/rate-limit';
+
+const rateLimiter = rateLimit({
+    interval: 12*60*60*1000, // 12 hours
+    uniqueTokenPerInterval: 1, // 1 requests per interval 
+})
 
 export default async function deliver(req, res) {
     const { name, email, subject, message } = req.body;
     const { POSTOFFICE_PASSWORD } = process.env;
 
-    // rate limiter was already applied in server.js - bye bye
+    // rate limiter 
 
     let van = nodemailer.createTransport({
-        host: "smtp.spacemail.com",
+        host: "mail.spacemail.com",
         port: 465,
         secure: true, // because privacy
         auth: {
@@ -30,21 +35,21 @@ export default async function deliver(req, res) {
         if (err) {
             console.error(`oh bother, postman pat's van broke down.`);
             console.error(err);
-            return res.status(500).json({
+            res.status(500).json({
                 code: 500,
                 message: "Internal Server Error",
                 userMessage: "Oh bother, something went wrong. Please try again later.",
                 error: err
-            }) // using json response over html to check if that fixes the vercel timeout issue
+            }); // using json response over html to check if that fixes the vercel timeout issue
         } else {
             console.log(`postman pat delivered the mail!`);
             console.log(info);
-            return res.status(200).json({
+            res.status(200).json({
                 code: 200,
                 message: "OK",
                 userMessage: "Thanks! Your message has been sent.", 
                 info: info
-            }) // using json response over html to check if that fixes the vercel timeout issue
+            }); // using json response over html to check if that fixes the vercel timeout issue
         }
     });
 }

@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start",
+    "lint": "next lint",
+    "tailwind": "tailwindcss -i ./styles/global.css -o ./styles/tailwind.css",
+    "postcss": "postcss ./styles/tailwind.css -o ./styles/main.css"
   },
   "dependencies": {
     "express-rate-limit": "^7.1.4",
     "express-rate-limiter": "^1.3.1",
     "fs": "^0.0.1-security",
+    "lru-cache": "^10.0.2",
     "next": "14.0.2",
     "nodemailer": "^6.9.7",
     "react": "^18",
