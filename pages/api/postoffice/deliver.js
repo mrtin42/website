@@ -22,7 +22,7 @@ export default async function deliver(req, res) {
     let letter = {
         from: 'Postman Pat <postoffice@mbfrias.me.uk>', // who doesnt love a good old kids tv show reference
         to: "martin@mbfrias.co.uk",
-        subject: `New message from ${name} <${email}>: ${subject}`,
+        subject: `New message from ${name}`,
         html: `
             <h1>New message from ${name} <${email}></h1>
             <p>${message}</p>
@@ -33,15 +33,13 @@ export default async function deliver(req, res) {
         if (err) {
             console.error(`oh bother, postman pat's van broke down.`);
             console.error(err);
-            let errPage = path.join(process.cwd(), 'private', 'mailerror', 'server.html');
-            let html = fs.readFileSync(errPage, 'utf8');
-            res.status(500).send(html); // oh no
+            let html = fs.readFileSync(path.join(process.cwd(), 'private', 'mailerror', 'server.html'), 'utf8');
+            return res.status(500).send(html); // oh no
         } else {
             console.log(`postman pat delivered the mail!`);
             console.log(info);
-            let successPage = path.join(process.cwd(), 'private', 'mailsuccess', 'sent.html');
-            let html = fs.readFileSync(successPage, 'utf8');
-            res.status(200).send(html); // all good
+            let html = fs.readFileSync(path.join(process.cwd(), 'private', 'mailsuccess', 'sent.html'), 'utf8');
+            return res.status(200).send(html); // all good
         }
     });
 }
