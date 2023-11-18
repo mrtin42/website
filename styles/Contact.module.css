@@ -1,3 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+
+}
+
 .main {
     margin-top: 4rem;
     display: flex;
@@ -31,4 +41,75 @@
     color: #fff;
     margin: 0;
     padding: 0;
+}
+
+.grid {
+    display: flex;
+}
+
+.card {
+    text-align: center;
+    font-family: 'Assistant', sans-serif;
+}
+
+.cardtitle {
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    text-decoration: dotted underline;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    text-decoration: solid underline;
+}
+
+.form {
+    height: 33rem;
+    width: 35rem;
+    background-color: #00000093; /* Front card color */
+    color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #fff;
+    margin: 1rem;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formtitle {
+    font-size: 2.5rem;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+
+.formelement {
+    width: 80%;
+    margin: 0.15rem;
+    font-family: 'Assistant', sans-serif;
+}
+
+.formlabel {
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: 'Assistant', sans-serif;
+    font-style: italic;
+    text-align: left;
+}
+
+.smallinput, .textarea {
+    color: black;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+}
+
+.textarea {
+    height: 10rem;
 }

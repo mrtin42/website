@@ -1,16 +1,18 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Navbar from '@/components/navbar'
+import Box from '@/components/box'
 import styles from '@/styles/Projects.module.css'
+import boxStyles from '@/styles/Box.module.css'
 import { Inter } from 'next/font/google'
 import { GetStaticProps } from 'next'
-import Box from '@/components/box'
 
 export default function Projects() {
     return (
         <div className={styles.container}>
             <Head>
                 <meta charSet="utf-8" />
-                <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Projects // MAЯTÍN</title>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistan&display=swap" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" />
@@ -44,14 +46,7 @@ export default function Projects() {
                 <meta name="language" content="English" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <nav className='navbar'>
-                <ul>
-                    <li><a href="./" className="page-link">home</a></li>
-                    <li><a href="./projects" className="page-link glitch">projects</a></li>
-                    <li><a href="./contact" className="page-link">contact</a></li>
-                    <li><a href="./domains" className="page-link">domains</a></li>
-                </ul>
-            </nav>
+            <Navbar active="projects" />
             <main className={styles.main}>
                 <header className={styles.header}>
                     <h1 className={[styles.title, 'glitch'].join(' ')}>
@@ -62,25 +57,25 @@ export default function Projects() {
                     <p className={styles.description}>i have made things and i think they're cool and you should check them out</p>
                 </header>
                 <div className={styles.grid}>
-                    <Box title="LondonTransit" className={styles.card}>
+                    <Box title="LondonTransit" className={boxStyles.card}>
                         <p className={styles.description}>A discord bot that provides information about the London, UK public transport system.</p>
-                        <Link href="https://londontransit.org.uk" className={styles.boxurl} target='_blank'>londontransit.org.uk</Link>
+                        <Link href="https://londontransit.org.uk" className={boxStyles.boxurl} target='_blank'>londontransit.org.uk</Link>
                     </Box>
-                    <Box title="FORMALISER" className={styles.card}>
+                    <Box title="FORMALISER" className={boxStyles.card}>
                         <p className={styles.description}>A backend for web forms that allows you to submit HTML forms to your email.</p>
-                        <Link href="https://formaliser.net" className={styles.boxurl} target='_blank'>formaliser.net</Link>
+                        <Link href="https://formaliser.net" className={boxStyles.boxurl} target='_blank'>formaliser.net</Link>
                     </Box>
-                    <Box title="Kool Kookie Klicker" className={styles.card}>
+                    <Box title="Kool Kookie Klicker" className={boxStyles.card}>
                         <p className={styles.description}>Basic cookie clicker game made in raw HTML, CSS and JS that i made purely to test my client side JS skills.</p>
-                        <Link href="https://cookies.mbfr.app" className={styles.boxurl} target='_blank'>cookies.mbfr.app</Link>
+                        <Link href="https://cookies.mbfr.app" className={boxStyles.boxurl} target='_blank'>cookies.mbfr.app</Link>
                     </Box>
-                    <Box title="MAЯTÍN" className={styles.card}>
+                    <Box title="MAЯTÍN" className={boxStyles.card}>
                         <p className={styles.description}>This website, made in Next.js and React. Adapted from its original form in raw HTML, CSS and JS.</p>
-                        <Link href="https://marrtin.com" className={styles.boxurl} target='_blank'>marrtin.com</Link>
+                        <Link href="https://marrtin.com" className={boxStyles.boxurl} target='_blank'>marrtin.com</Link>
                     </Box>
-                    <Box title="Scriptables" className={styles.card}>
+                    <Box title="Scriptables" className={boxStyles.card}>
                         <p className={styles.description}>A collection of scripts for the iOS app Scriptable.</p>
-                        <Link href="./scriptables" className={styles.boxurl} target='_blank'>scriptables</Link>
+                        <Link href="./scriptables" className={boxStyles.boxurl} target='_blank'>scriptables</Link>
                     </Box>
                 </div>
                 <p className={styles.belowbox}>theyre so cool arent they</p>

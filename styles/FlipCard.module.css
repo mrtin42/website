@@ -1,7 +1,8 @@
 .flipCard {
     perspective: 1000px;
-    width: 200px;
-    height: 300px;
+    width: 16rem;
+    height: 16rem;
+    margin: 1rem;
   }
   
   .flipCardInner {
@@ -10,6 +11,8 @@
     transform-style: preserve-3d;
     transition: transform 0.6s;
   }
+
+
   
   .flipCard:hover .flipCardInner {
     transform: rotateY(180deg);
@@ -31,11 +34,17 @@
   }
   
   .flipCardFront {
-    background-color: #3498db; /* Front card color */
-  }
+    background-color: #00000093; /* Front card color */
+    color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #fff;
+  } 
   
   .flipCardBack {
-    background-color: #2ecc71; /* Back card color */
     transform: rotateY(180deg);
+    background-color: #ffffff; /* Back card color */
+    color: #050505;
+    border-radius: 1rem;
+    border: 1px solid #000;
   }
   

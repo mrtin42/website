@@ -6,12 +6,25 @@ interface FlipCardProps {
   backContent: React.ReactNode;
 }
 
+
 const FlipCard: React.FC<FlipCardProps> = ({ frontContent, backContent }) => {
   const [isFlipped, setFlipped] = useState(false);
 
   const handleFlip = () => {
-    setFlipped(!isFlipped);
-  };
+    if (
+      navigator.userAgent.match(/Android/i) ||
+      navigator.userAgent.match(/webOS/i) ||
+      navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPad/i) ||
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/BlackBerry/i) ||
+      navigator.userAgent.match(/Windows Phone/i)
+    ) {
+      setFlipped(!isFlipped);
+    } else {
+      return;
+    }
+  }
 
   return (
     <div className={`${styles.flipCard} ${isFlipped ? styles.flipped : ''}`} onClick={handleFlip}>

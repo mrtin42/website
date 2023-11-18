@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import Script from 'next/script'
 import Link from 'next/link'
+import Navbar from '@/components/navbar'
 import styles from '@/styles/Home.module.css'
 import { Inter, Inconsolata, Unbounded } from 'next/font/google'
 
@@ -9,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 const inconsolata = Inconsolata({ subsets: ['latin'] })
 const unbounded = Unbounded({ subsets: ['latin'] })
 
-var open: string | null = null;
+let open: string | null = null;
 
 export function openPopup(id: string) {
   // Close the current popup if one is open
@@ -39,10 +40,10 @@ export default function Home() {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>MAЯTÍN</title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Inconsolata:wght@300&family=Unbounded:wght@900&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:wght@300&display=swap" />
@@ -83,14 +84,7 @@ export default function Home() {
         <link rel="manifest" href="/manifest.json" />
       </Head>
       <div>
-        <nav className='navbar'>
-          <ul>
-            <li><a href="./" className="page-link glitch">home</a></li>
-            <li><a href="./projects" className="page-link">projects</a></li>
-            <li><a href="./contact" className="page-link">contact</a></li>
-            <li><a href="./domains" className="page-link">domains</a></li>
-          </ul>
-        </nav>
+        <Navbar active="home" />
         <div className={styles.container}>
           <main className={styles.main}>
             <div className={styles.name}>
