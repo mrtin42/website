@@ -1,0 +1,7 @@
+{
+    "functions": {
+        "api/postoffice/deliver.js": {
+            "maxDuration": 30
+        }
+    }
+}
