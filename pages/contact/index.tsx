@@ -16,7 +16,6 @@ export default function Contact() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Contact // MAЯTÍN</title>
                 <link rel="icon" href="/favicon.ico" />
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistan&display=swap" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:wght@300&display=swap" />
@@ -93,7 +92,7 @@ export default function Contact() {
                         </div>
                         <div className={styles.form}>
                             <h1 className={styles.formtitle}>or drop me a message</h1>
-                            <form action="http://formaliser.net/send?to=martin@mbfrias.co.uk" method="POST" className={styles.formelement}>
+                            <form action="/api/postoffice/deliver/  " method="POST" className={styles.formelement}>
                                 <label className={styles.formlabel} htmlFor="name">name</label><br />
                                 <input className={styles.smallinput} type="text" name="name" id="name" placeholder="Charlie Woodhead" required /><br />
                                 <label className={styles.formlabel} htmlFor="email">email</label><br />

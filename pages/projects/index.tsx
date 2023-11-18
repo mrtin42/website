@@ -14,7 +14,6 @@ export default function Projects() {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Projects // MAЯTÍN</title>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistan&display=swap" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:wght@300&display=swap" />
