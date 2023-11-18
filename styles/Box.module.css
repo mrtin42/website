@@ -22,4 +22,20 @@
     padding: 1rem;
     margin: 1rem;
     width: 80%;
-}   
+}
+
+.card h1 {
+    font-size: 2rem;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        font-size: 0.8rem;
+    }
+    
+}

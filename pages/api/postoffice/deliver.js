@@ -12,6 +12,20 @@ export default async function deliver(req, res) {
     const { name, email, subject, message } = req.body;
     const { POSTOFFICE_PASSWORD } = process.env;
 
+    if (!name || !email || !subject || !message) {
+        let file = path.join(process.cwd(), 'private', 'mailerror', 'empty.html');
+        let html = fs.readFileSync(file, 'utf8');
+        res.status(400).send(html);
+        return;
+    };
+
+    if (!email.includes('@') || !email.includes('.')) {
+        let file = path.join(process.cwd(), 'private', 'mailerror', 'falsemail.html');
+        let html = fs.readFileSync(file, 'utf8');
+        res.status(400).send(html);
+        return;
+    };
+
     // rate limiter 
 
     let van = nodemailer.createTransport({
@@ -35,21 +49,15 @@ export default async function deliver(req, res) {
         if (err) {
             console.error(`oh bother, postman pat's van broke down.`);
             console.error(err);
-            res.status(500).json({
-                code: 500,
-                message: "Internal Server Error",
-                userMessage: "Oh bother, something went wrong. Please try again later.",
-                error: err
-            }); // using json response over html to check if that fixes the vercel timeout issue
+            let file = path.join(process.cwd(), 'private', 'mailerror', 'server.html');
+            let html = fs.readFileSync(file, 'utf8');
+            res.status(500).send(html);
         } else {
             console.log(`postman pat delivered the mail!`);
             console.log(info);
-            res.status(200).json({
-                code: 200,
-                message: "OK",
-                userMessage: "Thanks! Your message has been sent.", 
-                info: info
-            }); // using json response over html to check if that fixes the vercel timeout issue
+            let file = path.join(process.cwd(), 'private', 'mailsuccess', 'sent.html');
+            let html = fs.readFileSync(file, 'utf8');
+            res.status(200).send(html);
         }
     });
 }

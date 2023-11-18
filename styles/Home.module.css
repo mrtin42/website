@@ -10,6 +10,8 @@
     top: 0;
 }
 
+
+
 .name h1 {
     font-size: 7rem;
     font-family: 'Unbounded', sans-serif;
@@ -17,6 +19,12 @@
     color: #fff;
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .name h1 {
+        font-size: 4rem;
+    }
 }
 
 .description {
@@ -42,14 +50,35 @@
     transition: all 0.3s ease;
 }
 
+@media screen and (max-width: 768px) {
+    .sectionopener, .contactbutton {
+        font-size: 1rem;
+    }
+}
+
 .sectionopener:hover, .contactbutton:hover {
     background: #fff;
     color: #000;
     font-size: 1.6rem;
 }
 
+@media screen and (max-width: 768px) {
+    .sectionopener:hover, .contactbutton:hover {
+        background: transparent;
+        color: #fff;
+        font-size: 1rem;
+    }
+}
+
 .sectionopener:active, .contactbutton:active, #submit:active {
     transform: scale(0.9);
+}
+
+@media screen and (max-width: 768px) {
+    .sectionopener:active, .contactbutton:active, #submit:active {
+        transform: scale(0.8);
+    }
+  
 }
 
 /* popup poppin' up effect */
@@ -81,6 +110,13 @@
     padding: 1rem;
   }
 
+  @media screen and (max-width: 768px) {
+    .popupcontent {
+      margin: 0.5rem;
+      padding: 1rem;
+    }
+  }
+
   @media screen and (max-width: 600px) {
     .popupcontent {
       background-color: #000;
@@ -96,10 +132,23 @@
     text-transform: uppercase;
     color: #ffffffbb;
   }
+
+  @media screen and (max-width: 768px) {
+    .popupcontent h6 {
+      font-size: 0.8rem;
+    }
+  }
   
   .popupcontent p {
     font-size: large;
     font-family: 'Assistant', sans-serif;
+  }
+
+  @media screen and (max-width: 768px) {
+    .popupcontent p {
+      font-size: 1rem;
+      line-height: 130%;
+    }
   }
   
   .popupcontent a {
@@ -119,6 +168,12 @@
 .popupclose:hover {
     text-decoration: solid underline #fff;
 }
+
+@media screen and (max-width: 768px) {
+    .popupclose:hover {
+        text-decoration: dotted underline #fff;
+    }
+  }
 
 .popuptitle {
     font-family: 'Assistant', sans-serif;

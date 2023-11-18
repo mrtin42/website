@@ -13,7 +13,6 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
-
 }
 
 .title {
@@ -24,12 +23,26 @@
     padding: 0;
 }
 
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
 .description {
+    text-align: center;
     font-size: 1.5rem;
     font-family: 'Assistant', sans-serif;
     color: #fff;
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .description {
+        font-size: 1rem;
+        margin-inline: 1rem;
+    }
 }
 
 .grid {

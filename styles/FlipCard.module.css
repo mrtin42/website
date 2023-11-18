@@ -4,6 +4,14 @@
     height: 16rem;
     margin: 1rem;
   }
+
+  @media screen and (max-width: 768px) {
+    .flipCard {
+      width: 90vw;
+      height: 12rem;
+
+    }
+  }
   
   .flipCardInner {
     width: 100%;
@@ -11,10 +19,8 @@
     transform-style: preserve-3d;
     transition: transform 0.6s;
   }
-
-
   
-  .flipCard:hover .flipCardInner {
+  .flipCard:active .flipCardInner {
     transform: rotateY(180deg);
   }
   

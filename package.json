@@ -3,12 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "tailwind": "tailwindcss -i ./styles/global.css -o ./styles/tailwind.css",
-    "postcss": "postcss ./styles/tailwind.css -o ./styles/main.css"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "express-rate-limit": "^7.1.4",
