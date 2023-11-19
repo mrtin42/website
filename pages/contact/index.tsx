@@ -96,7 +96,7 @@ export default function Contact() {
                                 <label className={styles.formlabel} htmlFor="name">name</label><br />
                                 <input className={styles.smallinput} type="text" name="name" id="name" placeholder="Charlie Woodhead" required /><br />
                                 <label className={styles.formlabel} htmlFor="email">email</label><br />
-                                <input className={styles.smallinput} type="text" name="email" id="email" placeholder="panic@thedis.co" required /><br />
+                                <input className={styles.smallinput} type="email" name="email" id="email" placeholder="panic@thedis.co" required /><br />
                                 <label className={styles.formlabel} htmlFor="subject">subject</label><br />
                                 <input className={styles.smallinput} type="text" name="subject" id="subject" placeholder="i love your website" required /><br />
                                 <label className={styles.formlabel} htmlFor="message">message</label><br />
