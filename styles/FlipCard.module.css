@@ -20,8 +20,22 @@
     transition: transform 0.6s;
   }
   
-  .flipCard:active .flipCardInner {
+  .flipCard:hover .flipCardInner {
     transform: rotateY(180deg);
+  }
+
+  .flipCard:active .flipCardInner {
+    transform: rotateY(0);
+  }
+
+  @media screen and (max-width: 768px) {
+    .flipCard:hover .flipCardInner {
+      transform: rotateY(0);
+    }
+
+    .flipCard:active .flipCardInner {
+      transform: rotateY(180deg);
+    }
   }
   
   .flipCard.flipped .flipCardInner {
