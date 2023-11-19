@@ -43,6 +43,7 @@ export default async function deliver(req, res) {
         let letter = {
             from: 'Postman Pat <postoffice@mbfrias.me.uk>', // who doesnt love a good old kids tv show reference
             to: "martin@mbfrias.co.uk",
+            replyTo: `${name} <${email}>`,
             subject: `New message from ${name}`,
             text: `From: ${name} (${email})\n\n${message}`,
         };
