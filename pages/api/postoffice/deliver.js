@@ -5,12 +5,12 @@ import rateLimit from '@/utils/rate-limit';
 
 const rateLimiter = rateLimit({
     interval: 12*60*60*1000, // 12 hours
-    uniqueTokenPerInterval: 1, // 1 requests per interval 
+    uniqueTokenPerInterval: 2, // 1 requests per interval 
 })
 
 export default async function deliver(req, res) {
     try {
-        await rateLimiter.check(res, 1, 'CACHE_KEY_POSTOFFICE_DELIVER'); // 1 request per 12 hours
+        await rateLimiter.check(res, 2, 'CACHE_KEY_POSTOFFICE_DELIVER'); // 1 request per 12 hours
         const { name, email, subject, message } = req.body;
         const { POSTOFFICE_PASSWORD } = process.env;
 
