@@ -61,11 +61,106 @@ export default async function deliver(req, res) {
                 let file = path.join(process.cwd(), 'private', 'mailsuccess', 'sent.html');
                 let html = fs.readFileSync(file, 'utf8');
                 res.status(200).send(html);
+                // what else can we do here?
+                // maybe send a copy to the sender?
+                // no that would be annoying
+                // maybe send a copy to me?
+                // no that already happens LOL
+                // maybe send a copy to the sender if the sender is me?
+                // well that would still still happen LMFAO
+                // maybe send a copy to the sender if the sender is me and the message is a test?
+                // no that would be annoying
+                // man i really dont know what else to do here
+                // maybe i should just leave it as it is
+                // yeah i think i will
+                // i mean i could send a copy to the sender if the sender is me and the message is a test and the subject is "test"
+                // but that would be annoying
+                // i mean it would be a good way to test the email system
+                // but it would be annoying
+                // i mean i could send a copy to the sender if the sender is me and the message is a test and the subject is "test" and the email is "martin@localhost"
+                // but that would be annoying
+                // okay i think i will just leave it as it is
+                // yeah i think i will
+                // right then i will
+                // okay then
+                // bye
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //               
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //                
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //                
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //                
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //                
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                // what are you still doing here?
+                // i thought you left
+                // well i guess i will just leave you here
+                // okay then
+                // bye  
             }
         });
     } catch {
         let file = path.join(process.cwd(), 'private', 'mailerror', 'limit.html');
         let html = fs.readFileSync(file, 'utf8');
         res.status(429).send(html);
+        // WHAT ARE YOU STILL DOING HERE?
+        // man you really are persistent
+        // okay then
+        // bye
     }
 }
