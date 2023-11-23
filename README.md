@@ -1,4 +1,4 @@
-<a href="https://▲.to">
+<a href="https://▲.to" target="_blank">
   <img src="https://raw.githubusercontent.com/abumalick/powered-by-vercel/f12b4f02b036bf101ca36ec0f3e99988a04da09c/powered-by-vercel.svg" align="right" height="50" alt="Powered by Vercel">
 </a>
 
