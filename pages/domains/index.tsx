@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Box from "@/components/box";
+import DBox from "@/components/dbox";
 import styles from "@/styles/Domains.module.css";
 import boxStyles from "@/styles/Box.module.css";
 
@@ -58,8 +59,8 @@ export default function Domains() {
                 <div className={styles.grid}>
                     <Box title="marrtin.com" className={boxStyles.card}>
                         <p className={styles.description}>this website's main domain</p>
-                    </Box>
-                    <Box title="mbfrias.co.uk + .me.uk" className={boxStyles.card}>
+                    </DBox>
+                    <DBox domainlink="mbfrias.co.uk" title="mbfrias.co.uk + .me.uk" className={boxStyles.card}>
                         <p className={styles.description}>
                             this website's redirect domains
                             <br />
@@ -68,26 +69,26 @@ export default function Domains() {
                             <br />
                             .me.uk: automated emails (big up <Link href="https://spacemail.com" className={styles.link}>spacemail</Link>)
                         </p>
-                    </Box>
-                    <Box title="londontransit.org.uk + .me.uk + .xyz" className={boxStyles.card}>
+                    </DBox>
+                    <DBox domainlink="londontransit.org.uk" title="londontransit.org.uk + .me.uk + .xyz" className={boxStyles.card}>
                         <p className={styles.description}>
                             my discord bot's website [org.uk mainly]
                             <br />
                             (i am not planning on renewing the .me.uk and .xyz domains)
                         </p>
-                    </Box>
-                    <Box title="mrtin.co, mvrt.in, mbfr.me" className={boxStyles.card}>
+                    </DBox>
+                    <DBox domainlink="mrtin.co" title="mrtin.co, mvrt.in, mbfr.me" className={boxStyles.card}>
                         <p className={styles.description}>url shorteners (big up <Link href="https://dub.co" className={styles.link}>dub.co</Link>)</p>
-                    </Box>
-                    <Box title="mbfr.app" className={boxStyles.card}>
+                    </DBox>
+                    <DBox domainlink="cookies.mbfr.app" title="mbfr.app" className={boxStyles.card}>
                         <p className={styles.description}>subdomain for any of my web apps that dont remit a domain of their own</p>
-                    </Box>
-                    <Box title="formaliser.net" className={boxStyles.card}>
+                    </DBox>
+                    <DBox domainlink="formaliser.net" title="formaliser.net" className={boxStyles.card}>
                         <p className={styles.description}>that backend for web forms that i made</p>
-                    </Box>
-                    <Box title="mbfrias.pp.ua, tub3.uk, tub3.tech" className={boxStyles.card}>
+                    </DBox>
+                    <DBox domainlink="placehold.pages.dev" title="mbfrias.pp.ua, tub3.uk, tub3.tech" className={boxStyles.card}>
                         <p className={styles.description}>random domains i got for free and i only use for testing</p>
-                    </Box>
+                    </DBox>
 
                 </div>
             </main>
