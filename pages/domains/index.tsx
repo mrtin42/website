@@ -59,7 +59,7 @@ export default function Domains() {
                 <div className={styles.grid}>
                     <Box title="marrtin.com" className={boxStyles.card}>
                         <p className={styles.description}>this website's main domain</p>
-                    </DBox>
+                    </Box>
                     <DBox domainlink="mbfrias.co.uk" title="mbfrias.co.uk + .me.uk" className={boxStyles.card}>
                         <p className={styles.description}>
                             this website's redirect domains
