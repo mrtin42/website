@@ -2,13 +2,17 @@ import nodemailer from 'nodemailer';
 import fs from 'fs';
 import path from 'path';
 import rateLimit from '@/utils/rate-limit';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 const rateLimiter = rateLimit({
     interval: 12*60*60*1000, // 12 hours
     uniqueTokenPerInterval: 2, // 1 requests per interval 
 })
 
-export default async function deliver(req, res) {
+export default async function deliver(
+    req: NextApiRequest,
+    res: NextApiResponse
+) {
     try {
         await rateLimiter.check(res, 2, 'CACHE_KEY_POSTOFFICE_DELIVER'); // 1 request per 12 hours
         const { name, email, subject, message } = req.body;
@@ -41,10 +45,10 @@ export default async function deliver(req, res) {
         });
 
         let letter = {
-            from: 'Postman Pat <postoffice@mbfrias.com>', // who doesnt love a good old kids tv show reference
+            from: 'WWW.MARRTIN.COM <postoffice@mbfrias.com>',
             to: "martin@mbfrias.co.uk",
             replyTo: `${name} <${email}>`,
-            subject: `New message from ${name}`,
+            subject: `New message from ${name}: ${subject}`,
             text: `From: ${name} (${email})\n\n${message}`,
         };
 
