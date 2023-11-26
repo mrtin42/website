@@ -35,13 +35,13 @@ export default async function deliver(req, res) {
             port: 465,
             secure: true, // because privacy
             auth: {
-                user: "postoffice@mbfrias.me.uk",
+                user: "postoffice@mbfrias.com",
                 pass: POSTOFFICE_PASSWORD,
             }
         });
 
         let letter = {
-            from: 'Postman Pat <postoffice@mbfrias.me.uk>', // who doesnt love a good old kids tv show reference
+            from: 'Postman Pat <postoffice@mbfrias.com>', // who doesnt love a good old kids tv show reference
             to: "martin@mbfrias.co.uk",
             replyTo: `${name} <${email}>`,
             subject: `New message from ${name}`,
