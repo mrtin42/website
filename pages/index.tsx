@@ -95,7 +95,7 @@ export default function Home() {
               </h1>
               <div className={styles.sectionbuttons}>
                 <button className={styles.sectionopener} id="about" onClick={() => openPopup('aboutpopup')}>about</button>
-                <button className={styles.sectionopener} id="skills" onClick={() => openPopup('skillspopup')}>projects</button>
+                <button className={styles.sectionopener} id="skills" onClick={() => openPopup('skillspopup')}>skills</button>
                 <button className={styles.sectionopener} id="testimonials" onClick={() => openPopup('testimonialspopup')}>testimonials</button>
               </div>
             </div>
