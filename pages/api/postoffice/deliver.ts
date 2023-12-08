@@ -16,7 +16,7 @@ export default async function deliver(
     try {
         await rateLimiter.check(res, 2, 'CACHE_KEY_POSTOFFICE_DELIVER'); // 1 request per 12 hours
         const { name, email, subject, message } = req.body;
-        const { POSTOFFICE_PASSWORD } = process.env;
+        const { POSTOFFICE_USER, POSTOFFICE_PASSWORD } = process.env;
 
         if (!name || !email || !subject || !message) {
             let file = path.join(process.cwd(), 'private', 'mailerror', 'empty.html');
@@ -39,13 +39,13 @@ export default async function deliver(
             port: 465,
             secure: true, // because privacy
             auth: {
-                user: "postoffice@mbfrias.com",
+                user: POSTOFFICE_USER,
                 pass: POSTOFFICE_PASSWORD,
             }
         });
 
         let letter = {
-            from: 'WWW.MARRTIN.COM <postoffice@mbfrias.com>',
+            from: `WWW.MARRTIN.COM <${POSTOFFICE_USER}>`,
             to: "martin@mbfrias.co.uk",
             replyTo: `${name} <${email}>`,
             subject: `New message from ${name}: ${subject}`,

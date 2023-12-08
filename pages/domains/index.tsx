@@ -57,38 +57,57 @@ export default function Domains() {
                     <p className={styles.description}>i find myself somewhat obsessed with domains and DNS, so heres the plenty of domains i own</p>
                 </header>
                 <div className={styles.grid}>
-                    <Box title="marrtin.com" className={boxStyles.card}>
+                    <DBox title="marrtin.com" domainlink="marrtin.com" className={boxStyles.card}>
                         <p className={styles.description}>this website's main domain</p>
-                    </Box>
-                    <DBox domainlink="mbfrias.co.uk" title="mbfrias.co.uk + .me.uk" className={boxStyles.card}>
+                    </DBox>
+                    <DBox domainlink="mbfrias.com" title="mbfrias.co.uk + .me.uk + .com" className={boxStyles.card}>
                         <p className={styles.description}>
-                            this website's redirect domains
-                            <br />
-                            <br />
-                            .co.uk: my email domain (big up <Link href="https://protonmail.com" className={styles.link}>protonmail</Link>)
-                            <br />
-                            .me.uk: automated emails (big up <Link href="https://spacemail.com" className={styles.link}>spacemail</Link>)
+                            my name, in various TLDs
+                            <br /><br />
+                            .co.uk: main email domain (big up <Link href="https://protonmail.com">protonmail</Link>)<br />
+                            .me.uk: kinda useless, got it for automated emails which is now down to .com<br />
+                            .com: automated emails, usually only to myself (big up <Link href="https://spacemail.com">spacemail</Link>)
+                        </p>
+                    </DBox>
+                    <DBox domainlink="mrtin.co" title="mrtin.co" className={boxStyles.card}>
+                        <p className={styles.description}>
+                            subdomain for things that don't need a full domain (e.g. <Link href="https://landingpages.mrtin.co">landingpages.mrtin.co</Link>)
+                        </p>
+                    </DBox>
+                    <DBox domainlink="mvrt.in" title="mvrt.in" className={boxStyles.card}>
+                        <p className={styles.description}>
+                            my personal URL shortener, powered by <Link href="https://dub.co">dub.co</Link>
+                        </p>
+                    </DBox>
+                    <DBox domainlink="formaliser.net" title="formaliser.net" className={boxStyles.card}>
+                        <p className={styles.description}>
+                            webform parser and delivery service which i coded, powered by <Link href="https://vercel.com">vercel</Link>
                         </p>
                     </DBox>
                     <DBox domainlink="londontransit.org.uk" title="londontransit.org.uk + .me.uk + .xyz" className={boxStyles.card}>
                         <p className={styles.description}>
-                            my discord bot's website [org.uk mainly]
-                            <br />
-                            (i am not planning on renewing the .me.uk and .xyz domains)
+                            discord bot for london transport, powered by <Link href="https://api-portal.tfl.gov.uk">TfL</Link>
                         </p>
                     </DBox>
-                    <DBox domainlink="mrtin.co" title="mrtin.co, mvrt.in, mbfr.me" className={boxStyles.card}>
-                        <p className={styles.description}>url shorteners (big up <Link href="https://dub.co" className={styles.link}>dub.co</Link>)</p>
+                    <h2 className={styles.description}>other domains that i own/manage</h2>
+                    <DBox domainlink="tubee.dev" title="tubee.dev" className={boxStyles.card}>
+                        <p className={styles.description}>
+                            the first domain i ever bought, based off my dying online alias "tube" and the fact that i am a developer
+                        </p>
                     </DBox>
-                    <DBox domainlink="cookies.mbfr.app" title="mbfr.app" className={boxStyles.card}>
-                        <p className={styles.description}>subdomain for any of my web apps that dont remit a domain of their own</p>
+                    <DBox domainlink="tub3.uk" title="tub3.uk + .tech" className={boxStyles.card}>
+                        <p className={styles.description}>
+                            same as above, but with a 3 instead of an e (also i got them for free)
+                        </p>
                     </DBox>
-                    <DBox domainlink="formaliser.net" title="formaliser.net" className={boxStyles.card}>
-                        <p className={styles.description}>that backend for web forms that i made</p>
+                    <DBox domainlink="mbfrias.pp.ua" title="mbfrias.pp.ua" className={boxStyles.card}>
+                        <p className={styles.description}>
+                            free domain which i use for testing
+                        </p>
                     </DBox>
-                    <DBox domainlink="placehold.pages.dev" title="mbfrias.pp.ua, tub3.uk, tub3.tech" className={boxStyles.card}>
-                        <p className={styles.description}>random domains i got for free and i only use for testing</p>
-                    </DBox>
+                    <p className={styles.description}>i also manage a few domains for friends/family, but i won't list them here for privacy reasons</p>
+                    <p>***</p>
+                    <p className={styles.description}>i also have one more domain, but due to its possibly explicit nature (landed me in an hour long detention in school), i won't list it here but it is connected to my <Link href="https://discord.com/users/488061232461381643">discord account</Link> (should save you from also getting detention if you happen to be on a school computer)</p>
 
                 </div>
             </main>
