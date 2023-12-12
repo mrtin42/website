@@ -92,7 +92,7 @@ export default function Contact() {
                         </div>
                         <div className={styles.form}>
                             <h1 className={styles.formtitle}>or drop me a message</h1>
-                            <form action="/api/postoffice/deliver/" method="POST" className={styles.formelement}>
+                            <form action="https://formaliser.net/send?to=martin@mbfrias.co.uk" method="POST" className={styles.formelement}>
                                 <label className={styles.formlabel} htmlFor="name">name</label><br />
                                 <input className={styles.smallinput} type="text" name="name" id="name" placeholder="Charlie Woodhead" required /><br />
                                 <label className={styles.formlabel} htmlFor="email">email</label><br />
