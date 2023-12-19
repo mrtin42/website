@@ -137,6 +137,8 @@ export default function Home() {
                     "thats proper splendid" - a guy from stoke-on-trent that i know whos literally the GOAT
                     <br />
                     "eat some chocolate chocolate chip" - Joseph Robinette Biden Jr, 46th President of the United States of America
+                    <br />
+                    "if looks could kill this website would be in prison " - albanian 
                   </p>
                   <button className={styles.popupclose} onClick={() => closePopup('testimonialspopup')}>close</button>
                 </div>
