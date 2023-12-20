@@ -66,7 +66,7 @@ export default function Domains() {
                             <br /><br />
                             .co.uk: main email domain (big up <Link href="https://protonmail.com">protonmail</Link>)<br />
                             .me.uk: kinda useless, got it for automated emails which is now down to .com<br />
-                            .com: automated emails, usually only to myself (big up <Link href="https://spacemail.com">spacemail</Link>)
+                            .com: mostly for webhooks and tunnels because they look better on this than on marrtin.com
                         </p>
                     </DBox>
                     <DBox domainlink="mrtin.co" title="mrtin.co" className={boxStyles.card}>
