@@ -1,0 +1,9 @@
+.blog {
+    background-color: #00000093; /* Front card color */
+    color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #fff;
+    margin: 3rem;
+    padding-inline: 3rem;
+    padding-block: 2rem;
+}

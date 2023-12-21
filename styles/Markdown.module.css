@@ -1,0 +1,75 @@
+.md {
+    text-align: center;
+}
+
+.md h1 {
+    font-size: 2em;
+}
+
+.md h2 {
+    font-size: 1.5em;
+    margin: 0.75em 0;
+}
+
+.md h3 {
+    font-size: 1.17em;
+    margin: 0.83em 0;
+}
+
+.md h4 {
+    font-size: 1em;
+    margin: 1.12em 0;
+}
+
+.md h5 {
+    font-size: 0.83em;
+    margin: 1.5em 0;
+}
+
+.md h6 {
+    font-size: 0.75em;
+    margin: 1.67em 0;
+}
+
+.md p {
+    margin: 1em 0;
+}
+
+.md ul,
+.md ol {
+    margin: 1em 0;
+}
+
+.md li > ul,
+
+.md li > ol {
+    margin: 0;
+}
+
+.md blockquote {
+    margin: 1em 0;
+}
+
+.md hr {
+    height: 1px;
+    margin: 1em 0;
+    background-color: #ddd;
+    border: none;
+}
+
+.md table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em 0;
+}
+
+.md table th {
+    font-weight: bold;
+}
+
+.md table th,
+.md table td {
+    border: 1px solid #ddd;
+    padding: 0.5em 1em;
+}
+
