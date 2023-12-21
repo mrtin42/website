@@ -89,7 +89,9 @@ export default function Domains() {
                             discord bot for london transport, powered by <Link href="https://api-portal.tfl.gov.uk">TfL</Link>
                         </p>
                     </DBox>
-                    <h2 className={styles.description}>other domains that i own/manage</h2>
+                    <br />
+                    <h2 className={styles.description}>other, usually inactive domains that i own/manage</h2>
+                    <br />
                     <DBox domainlink="tubee.dev" title="tubee.dev" className={boxStyles.card}>
                         <p className={styles.description}>
                             the first domain i ever bought, based off my dying online alias "tube" and the fact that i am a developer
