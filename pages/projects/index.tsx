@@ -72,10 +72,10 @@ export default function Projects() {
                         <p className={styles.description}>This website, made in Next.js and React. Adapted from its original form in raw HTML, CSS and JS.</p>
                         <Link href="https://marrtin.com" className={boxStyles.boxurl} target='_blank'>marrtin.com</Link>
                     </Box>
-                    <Box title="Scriptables" className={boxStyles.card}>
+                    {/* <Box title="Scriptables" className={boxStyles.card}>
                         <p className={styles.description}>A collection of scripts for the iOS app Scriptable.</p>
                         <Link href="./scriptables" className={boxStyles.boxurl} target='_blank'>scriptables</Link>
-                    </Box>
+                    </Box> */}
                 </div>
                 <p className={styles.belowbox}>theyre so cool arent they</p>
             </main>
