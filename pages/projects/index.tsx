@@ -58,11 +58,11 @@ export default function Projects() {
                 <div className={styles.grid}>
                     <Box title="LondonTransit" className={boxStyles.card}>
                         <p className={styles.description}>A discord bot that provides information about the London, UK public transport system.</p>
-                        <Link href="https://londontransit.org.uk" className={boxStyles.boxurl} target='_blank'>londontransit.org.uk</Link>
+                        <Link href="https://londontransit.mrtin.co" className={boxStyles.boxurl} target='_blank'>londontransit.org.uk</Link>
                     </Box>
                     <Box title="FORMALISER" className={boxStyles.card}>
                         <p className={styles.description}>A backend for web forms that allows you to submit HTML forms to your email.</p>
-                        <Link href="https://formaliser.net" className={boxStyles.boxurl} target='_blank'>formaliser.net</Link>
+                        <Link href="https://formaliser.mrtin.co" className={boxStyles.boxurl} target='_blank'>formaliser.net</Link>
                     </Box>
                     <Box title="Kool Kookie Klicker" className={boxStyles.card}>
                         <p className={styles.description}>Basic cookie clicker game made in raw HTML, CSS and JS that i made purely to test my client side JS skills.</p>
@@ -70,7 +70,7 @@ export default function Projects() {
                     </Box>
                     <Box title="MAЯTÍN" className={boxStyles.card}>
                         <p className={styles.description}>This website, made in Next.js and React. Adapted from its original form in raw HTML, CSS and JS.</p>
-                        <Link href="https://marrtin.com" className={boxStyles.boxurl} target='_blank'>marrtin.com</Link>
+                        <Link href="https://www.mrtin.co" className={boxStyles.boxurl} target='_blank'>marrtin.com</Link>
                     </Box>
                     {/* <Box title="Scriptables" className={boxStyles.card}>
                         <p className={styles.description}>A collection of scripts for the iOS app Scriptable.</p>
