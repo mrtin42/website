@@ -99,12 +99,12 @@ export default function Domains() {
                     </DBox>
                     <DBox domainlink="tub3.uk" title="tub3.uk + .tech" className={boxStyles.card}>
                         <p className={styles.description}>
-                            same as above, but with a 3 instead of an e (also i got them for free)
+                            same as above, but with a 3 instead of an e (also i got them for free) - used for testing and is usually broken
                         </p>
                     </DBox>
                     <DBox domainlink="mbfrias.pp.ua" title="mbfrias.pp.ua" className={boxStyles.card}>
                         <p className={styles.description}>
-                            free domain which i use for testing
+                            free domain which i use for testing and is usually broken
                         </p>
                     </DBox>
                     <p className={styles.description}>i also manage a few domains for friends/family, but i won't list them here for privacy reasons</p>
