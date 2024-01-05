@@ -57,16 +57,23 @@ export default function Domains() {
                     <p className={styles.description}>i find myself somewhat obsessed with domains and DNS, so heres the plenty of domains i own</p>
                 </header>
                 <div className={styles.grid}>
+                    <DBox title="martin.blue" domainlink="martin.blue" className={boxStyles.card}>
+                        <p className={styles.description}>
+                            literally me in a domain blue is my favourite colour and my name is martin
+                            <br /><br />
+                            main domain for my websites and other internet accesible resources i host
+                        </p>
+                    </DBox>
                     <DBox title="marrtin.com" domainlink="marrtin.com" className={boxStyles.card}>
-                        <p className={styles.description}>this website's main domain</p>
+                        <p className={styles.description}>legacy main domain, redirects to martin.blue now (it was great while it lasted)</p>
                     </DBox>
                     <DBox domainlink="mbfrias.com" title="mbfrias.co.uk + .me.uk + .com" className={boxStyles.card}>
                         <p className={styles.description}>
                             my name, in various TLDs
                             <br /><br />
                             .co.uk: main email domain (big up <Link href="https://protonmail.com">protonmail</Link>)<br />
-                            .me.uk: kinda useless, got it for automated emails which is now down to .com<br />
-                            .com: mostly for webhooks and tunnels because they look better on this than on marrtin.com
+                            .me.uk: kinda useless, got it for automated emails which is now obsolete<br />
+                            .com: kinda useless, got it for internet accesible resources which is now down to martin.blue (things will begin to disappear from mbfrias.com soon)
                         </p>
                     </DBox>
                     <DBox domainlink="mrtin.co" title="mrtin.co" className={boxStyles.card}>
@@ -76,7 +83,7 @@ export default function Domains() {
                     </DBox>
                     <DBox domainlink="mvrt.in" title="mvrt.in" className={boxStyles.card}>
                         <p className={styles.description}>
-                            my personal URL shortener, powered by <Link href="https://dub.co">dub.co</Link>
+                            my personal URL shortener, powered by <Link href="https://dub.co">dub</Link>
                         </p>
                     </DBox>
                     <DBox domainlink="formaliser.net" title="formaliser.net" className={boxStyles.card}>
