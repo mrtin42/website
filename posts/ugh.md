@@ -1,6 +1,6 @@
 ---
 title: "end of christmas hols ugh"
-date: "2021-01-03"
+date: "2024-01-03"
 description: "what a shame"
 ---
 
@@ -22,3 +22,5 @@ in other news i bought a fresh new domain to add to my ever-growing collection (
 it also saves me the hassle of using mbfrias.com for subdomains because it doesn't look so ugly like marrtin.com did.
 
 BLIMEY thats alot of paragraphs. i think i'll stop here. this is the most effort i've ever put into a piece of literature ever wth????? anyways, have a great weekend. 
+
+edit 1: LOL WTH I PUT THE WRONG YEAR??? ITS 2024 NOT 2021 LMFAO happy new year btw
