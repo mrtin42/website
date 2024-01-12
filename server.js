@@ -3,10 +3,9 @@ const fs = require('fs')
 const { parse } = require('url')
 const next = require('next')
 const httpsConfig = {
- key: fs.readFileSync('/etc/letsencrypt/live/ldn.droplet.martinservers.cloud/privkey.pem'),
- cert: fs.readFileSync('/etc/letsencrypt/live/ldn.droplet.martinservers.cloud/fullchain.pem')
+  key: fs.readFileSync('./https/privkey.pem'),
+  cert: fs.readFileSync('./https/fullchain.pem'),
 }
- 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'localhost'
 const port = 3000
