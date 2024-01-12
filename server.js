@@ -1,6 +1,11 @@
-const { createServer } = require('http')
+const { createServer } = require('https')
+const fs = require('fs')
 const { parse } = require('url')
 const next = require('next')
+const httpsConfig = {
+ key: fs.readFileSync('/etc/letsencrypt/live/ldn.droplet.martinservers.cloud/privkey.pem'),
+ cert: fs.readFileSync('/etc/letsencrypt/live/ldn.droplet.martinservers.cloud/fullchain.pem')
+}
  
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'localhost'
@@ -10,7 +15,7 @@ const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
  
 app.prepare().then(() => {
-  createServer(async (req, res) => {
+  createServer(httpsConnfig, async (req, res) => {
     try {
       // Be sure to pass `true` as the second argument to `url.parse`.
       // This tells it to parse the query portion of the URL.
