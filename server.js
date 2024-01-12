@@ -3,8 +3,8 @@ const fs = require('fs')
 const { parse } = require('url')
 const next = require('next')
 const options = {
-  key: fs.readFileSync('/etc/letsencrypt/live/ldn1.euwest.martinservers.cloud/privkey.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/ldn1.euwest.martinservers.cloud/fullchain.pem'),
+  key: fs.readFileSync('/etc/letsencrypt/live/ldn1.euwest.martinservers.cloud-0001/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/ldn1.euwest.martinservers.cloud-0001/fullchain.pem'),
 }
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'ldn1.euwest.martinservers.cloud'
