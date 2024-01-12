@@ -1,24 +1,24 @@
-const { createServer } = require('https')
+const https = require('https')
 const fs = require('fs')
 const { parse } = require('url')
 const next = require('next')
-const httpsConfig = {
-  key: fs.readFileSync('./https/privkey.pem'),
-  cert: fs.readFileSync('./https/fullchain.pem'),
+const options = {
+  key: fs.readFileSync('/etc/letsencrypt/live/ldn.euwest.martinservers.cloud/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/ldn.euwest.martinservers.cloud/fullchain.pem'),
 }
 const dev = process.env.NODE_ENV !== 'production'
-const hostname = 'localhost'
-const port = 3000
+const hostname = 'ldn.euwest.martinservers.cloud'
+const port = 443
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
  
 app.prepare().then(() => {
-  createServer(httpsConfig, async (req, res) => {
+  https.createServer(options, async (req, res) => {
     try {
       // Be sure to pass `true` as the second argument to `url.parse`.
       // This tells it to parse the query portion of the URL.
-      const parsedUrl = parse(req.url, true)
+      const parsedUrl = parse(req.url, true)  
       const { pathname, query } = parsedUrl
  
       if (pathname === '/a') {
