@@ -16,6 +16,7 @@ export default function Contact() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Contact // MAЯTÍN</title>
                 <link rel="icon" href="/favicon.ico" />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:wght@300&display=swap" />
