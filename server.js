@@ -1,19 +1,41 @@
 const https = require('https')
+const http = require('http')
 const fs = require('fs')
 const { parse } = require('url')
 const next = require('next')
-const options = {
-  key: fs.readFileSync('/etc/letsencrypt/live/ldn1.euwest.martinservers.cloud-0001/privkey.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/ldn1.euwest.martinservers.cloud-0001/fullchain.pem'),
+if (process.env.NODE_ENV === 'production') {
+  var x = {
+    key: fs.readFileSync('/etc/letsencrypt/live/ldn1.euwest.martinservers.cloud-0001/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/ldn1.euwest.martinservers.cloud-0001/fullchain.pem'),
+  }
+} else {
+  var x = {
+    key: fs.readFileSync('./macbook.martin.local-key.pem'),
+    cert: fs.readFileSync('./macbook.martin.local.pem'),
+  }
 }
+const options = x // gotta love const only being block scoped smh
 const dev = process.env.NODE_ENV !== 'production'
-const hostname = 'ldn1.euwest.martinservers.cloud'
-const port = 443
-// when using middleware `hostname` and `port` must be provided below
-const app = next({ dev, hostname, port })
+if (dev) {
+  console.log('Running in development mode')
+  var h = 'macbook.martin.local'
+} else {
+  console.log('Running in production mode')
+  var h = 'ldn1.euwest.martinservers.cloud'
+}
+const hostname = h // gotta love const only being block scoped AGAIN smh
+const httpsPort = 443
+const httpPort = 80
+const app = next({ dev, hostname, httpsPort })
 const handle = app.getRequestHandler()
  
 app.prepare().then(() => {
+  http.createServer((req, res) => {
+    res.writeHead(301, { "Location": "https://" + hostname + req.url });
+    res.end();
+  }).listen(httpPort, () => {
+    console.log(`> Redirecting http://${hostname}:${httpPort} to https://${hostname}:${httpsPort}`)
+  });
   https.createServer(options, async (req, res) => {
     try {
       // Be sure to pass `true` as the second argument to `url.parse`.
@@ -38,7 +60,7 @@ app.prepare().then(() => {
       console.error(err)
       process.exit(1)
     })
-    .listen(port, () => {
-      console.log(`> Ready on http://${hostname}:${port}`)
+    .listen(httpsPort, () => {
+      console.log(`> Ready on http://${hostname}:${httpsPort}`)
     })
 })

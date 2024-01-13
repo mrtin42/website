@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "node-dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "node": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "express-rate-limit": "^7.1.4",
