@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image'
 
 type BoxProps = {
     title: string;
@@ -13,7 +13,11 @@ type BoxProps = {
 export default function Box(props: BoxProps) {
     return (
         <div className={props.className} id={props.id} style={props.style} {...props.props}>
-            <h1 className='text-3xl text-center text-white font-bold'>{props.title}</h1>
+            {    props.title !== 'LondonTransit' || props.title !== 'FORMALISER.NET' ?
+                    return (<h1 className='text-3xl text-center text-white font-bold'>{props.title}</h1>)
+                :
+                    return (<Image height={50} width={100} src={`https://fs1.euwest.martinservers.cloud/${props.title}.svg`} />
+            }
             <div className='flex flex-col items-center justify-center w-full h-full p-4 space-y-4 rounded-xl'>
                 {props.children}
             </div>
