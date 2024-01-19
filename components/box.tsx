@@ -21,7 +21,7 @@ export default function Box(props: BoxProps) {
                 )
             }
             {
-                props.title !== 'FORMALISER.NET' ? (
+                props.title !== 'FORMALISER' ? (
                     <h1 className='text-3xl text-center text-white font-bold'>{props.title}</h1>
                 ) : (
                     <Image height={50} width={100} alt={`${props.title} logo`} src={`https://fs1.euwest.martinservers.cloud/${props.title}.svg`} />
