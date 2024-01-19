@@ -13,7 +13,12 @@ type BoxProps = {
 export default function Box(props: BoxProps) {
     return (
         <div className={props.className} id={props.id} style={props.style} {...props.props}>
-            {    props.title !== 'LondonTransit' || props.title !== 'FORMALISER.NET' ?
+            {    props.title !== 'LondonTransit' ?
+                    return (<h1 className='text-3xl text-center text-white font-bold'>{props.title}</h1>)
+                :
+                    return (<Image height={50} width={100} src={`https://fs1.euwest.martinservers.cloud/${props.title}.svg`} />
+            }
+            {    props.title !== 'FORMALISER.NET' ?
                     return (<h1 className='text-3xl text-center text-white font-bold'>{props.title}</h1>)
                 :
                     return (<Image height={50} width={100} src={`https://fs1.euwest.martinservers.cloud/${props.title}.svg`} />
