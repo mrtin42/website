@@ -13,15 +13,19 @@ type BoxProps = {
 export default function Box(props: BoxProps) {
     return (
         <div className={props.className} id={props.id} style={props.style} {...props.props}>
-            {    props.title !== 'LondonTransit' ?
-                    return (<h1 className='text-3xl text-center text-white font-bold'>{props.title}</h1>)
-                :
-                    return (<Image height={50} width={100} src={`https://fs1.euwest.martinservers.cloud/${props.title}.svg`} />
+            {
+                props.title !== 'LondonTransit' ? (
+                    <h1 className='text-3xl text-center text-white font-bold'>{props.title}</h1>
+                ) : (
+                    <Image height={50} width={100} src={`https://fs1.euwest.martinservers.cloud/${props.title}.svg`} />
+                )
             }
-            {    props.title !== 'FORMALISER.NET' ?
-                    return (<h1 className='text-3xl text-center text-white font-bold'>{props.title}</h1>)
-                :
-                    return (<Image height={50} width={100} src={`https://fs1.euwest.martinservers.cloud/${props.title}.svg`} />
+            {
+                props.title !== 'FORMALISER.NET' ? (
+                    <h1 className='text-3xl text-center text-white font-bold'>{props.title}</h1>
+                ) : (
+                    <Image height={50} width={100} src={`https://fs1.euwest.martinservers.cloud/${props.title}.svg`} />
+                )
             }
             <div className='flex flex-col items-center justify-center w-full h-full p-4 space-y-4 rounded-xl'>
                 {props.children}
