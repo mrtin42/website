@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { VT323 } from 'next/font/google';
 
-const vt = VT323({ subsets: ['latin'] });
+const vt = VT323({ weight: '400', subsets: ['latin'] });
 
 type DBoxProps = {
     title: string;
