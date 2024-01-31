@@ -57,6 +57,10 @@ export default function Projects() {
                     <p className={styles.description}>i have made things and i think they're cool and you should check them out</p>
                 </header>
                 <div className={styles.grid}>
+                    <Box title="??????????" className={boxStyles.card}>
+                        <p className={[styles.description, ' glitch'].join(' ')}>??????????C??OM??I???N??????G?????s???00??N?????????</p>
+                        <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={[boxStyles.boxurl, ' glitch'].join(' ')} target='_blank'>??????????</Link>
+                    </Box>
                     <Box title="LondonTransit" className={boxStyles.card}>
                         <p className={styles.description}>A discord bot that provides information about the London, UK public transport system.</p>
                         <Link href="https://londontransit.org.uk" className={boxStyles.boxurl} target='_blank'>londontransit.org.uk</Link>
