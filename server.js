@@ -4,17 +4,17 @@ const fs = require('fs')
 const { parse } = require('url')
 const next = require('next')
 if (process.env.NODE_ENV === 'production') {
-  var x = {
-    key: fs.readFileSync('/etc/letsencrypt/live/ldn1.euwest.martinservers.cloud-0001/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/ldn1.euwest.martinservers.cloud-0001/fullchain.pem'),
+  var c = {
+    key: fs.readFileSync(process.env.PRODUCTION_TLSKEYPATH_DOTBLUE),
+    cert: fs.readFileSync(process.env.PRODUCTION_TLSCRTPATH_DOTBLUE),
   }
 } else {
-  var x = {
+  var c = {
     key: fs.readFileSync('./macbook.martin.local-key.pem'),
     cert: fs.readFileSync('./macbook.martin.local.pem'),
   }
 }
-const options = x // gotta love const only being block scoped smh
+const options = c // gotta love const only being block scoped smh
 const dev = process.env.NODE_ENV !== 'production'
 if (dev) {
   console.log('Running in development mode')
