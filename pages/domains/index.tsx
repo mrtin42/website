@@ -76,7 +76,7 @@ export default function Domains() {
                             .com: kinda useless, got it for internet accesible resources which is now down to martin.blue (things will begin to disappear from mbfrias.com soon)
                         </p>
                     </DBox>
-                    <DBox domainlink="mrtin.co" title="mrtin.co" className={boxStyles.card}>
+                    <DBox domainlink="mrtin.co" title="mrtin.co + .cl" className={boxStyles.card}>
                         <p className={styles.description}>
                             subdomain for things that don't need a full domain (e.g. <Link href="https://landingpages.mrtin.co">landingpages.mrtin.co</Link>)
                         </p>
@@ -84,18 +84,23 @@ export default function Domains() {
                     <DBox domainlink="mvrt.in" title="mvrt.in" className={boxStyles.card}>
                         <p className={styles.description}>
                             my personal URL shortener, powered by <Link href="https://dub.co">dub</Link>
+                            <br /><br />
+                            (feeling like ditching dub.co and making my own URL shortener because someone fell victim to CAPITLISM and nerfed the free plan while DOUBLING the price of the paid plan)
                         </p>
                     </DBox>
-                    <DBox domainlink="formaliser.net" title="formaliser.net" className={boxStyles.card}>
+                    <DBox domainlink="martinservers.cloud" title="martinservers.cloud" className={boxStyles.card}>
                         <p className={styles.description}>
-                            webform parser and delivery service which i coded, powered by <Link href="https://vercel.com">vercel</Link>
+                            domain for servers / VPSs i own and manage (to make CNAMEs easier)
+                            <br /><br />
+                             
                         </p>
                     </DBox>
-                    <DBox domainlink="londontransit.org.uk" title="londontransit.org.uk + .me.uk + .xyz" className={boxStyles.card}>
+                    <DBox domainlink="martinmail.one" title="martinmail.one" className={boxStyles.card}>
                         <p className={styles.description}>
-                            discord bot for london transport, powered by <Link href="https://api-portal.tfl.gov.uk">TfL</Link>
+                            general email domain, used for automated emails from my projects (when will everyone stop limiting custom domains to just one domain)
                         </p>
                     </DBox>
+
                     <br />
                     <h2 className={styles.description}>other, usually inactive domains that i own/manage</h2>
                     <br />
