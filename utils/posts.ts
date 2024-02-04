@@ -29,9 +29,9 @@ export function getSortedPostsData() {
   // Sort posts by date
   return allPostsData.sort((a: object | any, b: object | any) => {
     if (a.date < b.date) {
-      return -1;
-    } else {
       return 1;
+    } else {
+      return -1;
     }
   });
 }
