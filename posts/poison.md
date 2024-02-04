@@ -17,3 +17,5 @@ okay here's the REALLY cool thing i mentioned about 9 words ago: i started a new
 also planning on touching up my website a bit. i'm keeping this kickass design but i'm going to standardise fonts and colours and stuff, because pages like the [projects](/projects) page and the [domains](/domains) page look a bit... messy??? so that's going to happen. expect to see that before ??RE??D???ACT???E?D is released.
 
 i think that's all for now. i'm going to go get breakfast and then start celebrating my dad's birthday. i hope you all have a great day too.
+
+edit 1: got the url slug and post title wrong smh i need to pattern up fr
