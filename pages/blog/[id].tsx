@@ -34,7 +34,7 @@ export default function Post({ postData }: any) {
             <Head>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <title>{postData.title} // MAЯTÍN</title>
+                <title>{postData.title} // MAЯTÍN's blog</title>
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide" />

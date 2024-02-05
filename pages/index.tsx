@@ -88,6 +88,11 @@ export default function Home() {
         <div className={styles.container}>
           <main className={styles.main}>
             <div className={styles.name}>
+              <div className='p-2 m-2 text-white hover:text-red-600 hover:border-2 hover:border-red-600 bg-red-600 hover:bg-white rounded-md'>
+                <Link href="/blog/chiles-wildfires">
+                  please take a moment to read about what is happening in my hometown of Valparaiso, Chile and consider donating to help the people affected &rarr;
+                </Link>
+              </div>
               <h1 className={[unbounded.className, 'glitch'].join(' ')}>
                 <span aria-hidden="true">MAЯTÍN</span>
                 MAЯTÍN
