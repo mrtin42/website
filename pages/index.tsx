@@ -88,7 +88,7 @@ export default function Home() {
         <div className={styles.container}>
           <main className={styles.main}>
             <div className={styles.name}>
-              <div className='p-2 m-2 text-white hover:text-red-600 border-2 border-white hover:border-red-600 bg-red-600 hover:bg-white rounded-md transition-all duration-300'>
+              <div className='p-2 m-2 text-white hover:text-red-600 border-2 border-red-600 bg-red-600 hover:bg-white rounded-md transition-all duration-300'>
                 <Link href="/blog/chiles-wildfires">
                   please take a moment to read about what is happening in my hometown of Valparaiso, Chile and consider donating to help the people affected &rarr;
                 </Link>
