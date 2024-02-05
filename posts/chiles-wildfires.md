@@ -8,7 +8,7 @@ description: 'please help my country'
 
 can't lie man: i really had hoped to reseve my yap zone for sillies and funnies but i don't like standing by and just watching.
 
-i was born and raised in chile and i love it so much its a brilliant place please visit it when its safe and when you can. i grew up amongst some brilliant people in Valparaiso and i have tons of family there. unfortunately, i dont know if theyre safe right now.
+i was born and raised in chile and i love it so much its a brilliant place please visit it when its safe and when you can. i grew up amongst some brilliant people in Valparaiso and i have tons of family there. ~~unfortunately, i dont know if theyre safe right now~~ (edit 1: i can confirm i have heard from my family and they are safe, however, many people still need help.)
 
 since the beginning of february, chile has been ravaged by wildfires which has spread from the forests up high to the densely populated hills in Valparaiso and the surrounding areas. the fires have devastated the region so bad that a state of emergency has ben declared and countries like mexico, brazil and france have deployed aid and firefighters to help. Even the capital Santiago is on amber alert due to the smoke and risk of fires spreading. (not the amber alert you're thinking of americans, its just the lowest level of alert in chile). numerous areas are on red alert and people have been evacuated from their homes. unfortunately, it doesn't look like many of them will have homes to return to.
 
