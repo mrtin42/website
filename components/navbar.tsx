@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Navbar(props: { active: string }) {
     return (
-        <nav className='navbar overflow-y-hidden overflow-x-auto md:min-width-[150vw]'>
+        <nav className='navbar overflow-y-hidden overflow-x-auto'>
             <ul>
                 <li><Link href="/" className={['page-link', props.active === 'home' ? 'glitch' : ''].join(' ')}>home</Link></li>
                 <li><Link href="/projects" className={['page-link', props.active === 'projects' ? 'glitch' : ''].join(' ')}>projects</Link></li>
