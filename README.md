@@ -6,4 +6,4 @@
 
 website made in next.js, adapted from its [static](https://github.com/mbfrias/mbfrias.github.io) and [nodejs](https://github.com/mbfrias/nodesite) counterparts
 
-[marrtin.com](https://www.maritn.blue)
+[martin.blue](https://www.martin.blue)
