@@ -59,7 +59,7 @@ export default function Projects() {
                 <div className={styles.grid}>
                     <Box title="MLINX.co" className={boxStyles.card}>
                         <p className={[styles.description].join(' ')}>
-                            <span className="bg-green-500 rounded-lg-full">NEW</span>&nbsp;<span className="bg-red-600 rounded-full">BETA</span> A fantastically fantastic URL shortener that shortens URLs fantastically, with custom domains and everything (almost, i havent finished it yet but it's still cool!)
+                            <span className="bg-green-500 px-1 rounded-full">NEW</span>&nbsp;<span className="bg-red-600 px-1 rounded-full">BETA</span> A fantastically fantastic URL shortener that shortens URLs fantastically, with custom domains and everything (almost, i havent finished it yet but it's still cool!)
                         </p>
                         <Link href="https://mlinxapp.com" className={boxStyles.boxurl} target='_blank'>mlinx.co</Link>
                     </Box>
