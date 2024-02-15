@@ -57,17 +57,11 @@ export default function Projects() {
                     <p className={styles.description}>i have made things and i think they're cool and you should check them out</p>
                 </header>
                 <div className={styles.grid}>
-                    <Box title="??????????" className={boxStyles.card}>
+                    <Box title="MLINX.co" className={boxStyles.card}>
                         <p className={[styles.description, ' glitch'].join(' ')}>
-                            <span aria- aria-hidden="true">??????????C??OM??I???N??????G?????S???0O??N?????????</span>
-                            ??????????C??OM??I???N??????G?????S???0O??N?????????
-                            <span aria-hidden="true">??????????C??OM??I???N??????G?????S???0O??N?????????</span>
+                            <span className="bg-green-500 p-1 rounded-lg">NEW</span>&nbsp;<span className="bg-red-600">BETA</span> A fantastically fantastic URL shortener that shortens URLs fantastically, with custom domains and everything (almost, i havent finished it yet but it's still cool!)
                         </p>
-                        <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={[boxStyles.boxurl, ' glitch'].join(' ')} target='_blank'>
-                            <span aria-hidden="true">??????????</span>
-                            ??????????
-                            <span aria-hidden="true">??????????</span>
-                        </Link>
+                        <Link href="https://mlinxapp.com" className={boxStyles.boxurl} target='_blank'>mlinx.co</Link>
                     </Box>
                     <Box title="LondonTransit" className={boxStyles.card}>
                         <p className={styles.description}>A discord bot that provides information about the London, UK public transport system.</p>
