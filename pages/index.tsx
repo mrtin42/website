@@ -88,11 +88,6 @@ export default function Home() {
         <div className={styles.container}>
           <main className={styles.main}>
             <div className={styles.name}>
-              <div className='p-2 m-2 text-white hover:text-red-600 border-2 border-red-600 bg-red-600 hover:bg-white rounded-md transition-all duration-300'>
-                <Link href="/blog/chiles-wildfires">
-                  please take a moment to read about what is happening in my hometown of Valparaiso, Chile and consider donating to help the people affected &rarr;
-                </Link>
-              </div>
               <h1 className={[unbounded.className, 'glitch'].join(' ')}>
                 <span aria-hidden="true">MAЯTÍN</span>
                 MAЯTÍN
@@ -109,7 +104,7 @@ export default function Home() {
               <div className={styles.popupcontent}>
                 <h2 className={styles.popuptitle}>about</h2>
                 <p className={styles.popupdescription}>
-                  15 year old javascript/typescript developer - i make websites and discord bots
+                  16 year old javascript/typescript developer - i make websites and discord bots
                   <br />
                   i really like trains and i also like to play minecraft
                   <br />
