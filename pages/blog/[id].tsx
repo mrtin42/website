@@ -8,6 +8,9 @@ import styles from "@/styles/Domains.module.css";
 import boxStyles from "@/styles/Box.module.css";
 import mdstyles from "@/styles/Markdown.module.css";
 import blogstyles from "@/styles/Blog.module.css";
+import Inter from "next/font/google";
+
+const i = Inter({ subsets: ['latin'] })
 
 export async function getStaticPaths() {
     const paths = getAllPostIds();
@@ -81,7 +84,7 @@ export default function Post({ postData }: any) {
                 </header>
                 {/* TAILWIND TIME */}
                 <div className={'flex flex-row flex-wrap items-center justify-center text-slate-200 font-sans'}>
-                    <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} className={[mdstyles.md, blogstyles.blog].join(' ')} />
+                    <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} className={[mdstyles.md, blogstyles.blog, i.className].join(' ')} />
                 </div>
             </main>
         </>

@@ -66,6 +66,7 @@ export default function Home({ allPostsData }: any) {
                         <span aria-hidden="true">the yap zone</span>
                     </h1>
                     <p className={styles.description}>its like a blog but its just me waffling on about stuff</p>
+                    <p className='text-xs'>wait a moment thats literally what a blog is- oh well</p>
                 </header>
                 <div className={styles.grid}>
                     {allPostsData.map(({ id, date, title, description }: any) => (
