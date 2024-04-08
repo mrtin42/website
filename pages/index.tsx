@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import Script from 'next/script'
 import Link from 'next/link'
+import LiveActivity from '@/components/liveactivity'
 import Navbar from '@/components/navbar'
 import styles from '@/styles/Home.module.css'
 import { Inter, Inconsolata, Unbounded } from 'next/font/google'
@@ -88,6 +89,7 @@ export default function Home() {
         <div className={styles.container}>
           <main className={styles.main}>
             <div className={styles.name}>
+              <LiveActivity />
               <h1 className={[unbounded.className, 'glitch'].join(' ')}>
                 <span aria-hidden="true">MAЯTÍN</span>
                 MAЯTÍN
