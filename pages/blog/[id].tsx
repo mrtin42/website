@@ -8,7 +8,7 @@ import styles from "@/styles/Domains.module.css";
 import boxStyles from "@/styles/Box.module.css";
 import mdstyles from "@/styles/Markdown.module.css";
 import blogstyles from "@/styles/Blog.module.css";
-import Inter from "next/font/google";
+import { Inter } from "next/font/google";
 
 const i = Inter({ subsets: ['latin'] })
 
