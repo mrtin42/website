@@ -5,6 +5,13 @@ import Box from "@/components/box";
 import DBox from "@/components/dbox";
 import styles from "@/styles/Domains.module.css";
 import boxStyles from "@/styles/Box.module.css";
+import {
+    Carousel,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+    CarouselContent
+} from '@/components/ui/carousel'
 
 export default function Domains() {
     return (
@@ -56,7 +63,7 @@ export default function Domains() {
                     </h1>
                     <p className={styles.description}>i find myself somewhat obsessed with domains and DNS, so heres the plenty of domains i own</p>
                 </header>
-                <div className={styles.grid}>
+                {/* <div className={styles.grid}>
                     <DBox title="martin.blue" domainlink="martin.blue" className={boxStyles.card}>
                         <p className={styles.description}>
                             literally me in a domain blue is my favourite colour and my name is martin
@@ -123,6 +130,39 @@ export default function Domains() {
                     <p>***</p>
                     <p className={styles.description}>i also have one more domain, but due to its possibly explicit nature (landed me in an hour long detention in school), i won't list it here but it is connected to my <Link href="https://discord.com/users/488061232461381643">discord account</Link> (should save you from also getting detention if you happen to be on a school computer)</p>
 
+                </div> */}
+                <div className="flex flex-col space-y-4">
+                    <Carousel orientation="vertical">
+                        <CarouselContent>
+                            <CarouselItem>
+                                <DBox title="martin.blue" domainlink="martin.blue" className={boxStyles.card}>
+                                    <p className={styles.description}>
+                                        literally me in a domain blue is my favourite colour and my name is martin
+                                        <br /><br />
+                                        main domain for my websites and other internet accesible resources i host
+                                    </p>
+                                </DBox>
+                            </CarouselItem>
+                            <CarouselItem>
+                                <DBox title="mvrt.in" domainlink="mvrt.in" className={boxStyles.card}>
+                                    <p className={styles.description}>
+                                        my personal URL shortener, powered by <Link href="https://dub.co">dub</Link>
+                                        <br /><br />
+                                        (feeling like ditching dub.co and making my own URL shortener because someone fell victim to CAPITLISM and nerfed the free plan while DOUBLING the price of the paid plan)
+                                    </p>
+                                </DBox>
+                            </CarouselItem>
+                            <CarouselItem>
+                                <DBox domainlink="mrtin.co" title="mrtin.co + .cl" className={boxStyles.card}>
+                                    <p className={styles.description}>
+                                        subdomain for things that don't need a full domain (e.g. <Link href="https://landingpages.mrtin.co">landingpages.mrtin.co</Link>)
+                                    </p>
+                                </DBox>
+                            </CarouselItem>
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
                 </div>
             </main>
         </div>
