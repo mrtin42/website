@@ -45,6 +45,12 @@ export default function LiveActivity(): React.ReactNode {
                 setIsJamming(data.listening)    
                 setJamData(data.track)
             }
+
+            const ping = () => {
+                s.send('ba dum ba dum badum heartbeat')
+            }
+
+            setInterval(ping, 15000) // keep the connection alive every 15 seconds
         }
         set(/Mobi|Android/i.test(navigator.userAgent))
         fetchData() // start the loop
