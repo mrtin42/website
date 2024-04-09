@@ -89,12 +89,14 @@ export default function Home() {
         <div className={styles.container}>
           <main className={styles.main}>
             <div className={styles.name}>
-              <LiveActivity />
-              <h1 className={[unbounded.className, 'glitch'].join(' ')}>
-                <span aria-hidden="true">MAЯTÍN</span>
-                MAЯTÍN
-                <span aria-hidden="true">MAЯTÍN</span>
-              </h1>
+              <div className='relative'>
+                <h1 className={[unbounded.className, 'glitch'].join(' ')}>
+                  <span aria-hidden="true">MAЯTÍN</span>
+                  MAЯTÍN
+                  <span aria-hidden="true">MAЯTÍN</span>
+                </h1>
+                <LiveActivity />
+              </div>
               <div className={styles.sectionbuttons}>
                 <button className={styles.sectionopener} id="about" onClick={() => openPopup('aboutpopup')}>about</button>
                 <button className={styles.sectionopener} id="skills" onClick={() => openPopup('skillspopup')}>skills</button>

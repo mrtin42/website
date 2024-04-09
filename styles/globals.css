@@ -157,7 +157,7 @@ body {
 
 .glitch {
   font-weight: bold;
-  position: relative;
+  z-index: 10;
   text-shadow: 0.05em 0 0 #0000ff, -0.03em -0.04em 0 #ff0000,
     0.025em 0.04em 0 #00ff00;
   animation: glitch 725ms infinite;
