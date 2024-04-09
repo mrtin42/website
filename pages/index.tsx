@@ -90,7 +90,7 @@ export default function Home() {
           <main className={styles.main}>
             <div className={styles.name}>
               <div className='relative'>
-                <h1 className={[unbounded.className, 'glitch'].join(' ')}>
+                <h1 className={[unbounded.className, 'glitch-index'].join(' ')}>
                   <span aria-hidden="true">MAЯTÍN</span>
                   MAЯTÍN
                   <span aria-hidden="true">MAЯTÍN</span>
