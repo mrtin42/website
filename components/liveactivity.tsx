@@ -3,6 +3,7 @@ import * as React from 'react'
 import { Inter } from 'next/font/google'
 import * as Drawer from "@/components/ui/drawer"
 import * as Tooltip from "@/components/ui/tooltip"
+import Link from 'next/link'
 
 const socketUrl: string = process.env.NEXT_PUBLIC_SOCKET_URL || 'wss://nowplaying.martin.blue'
 
@@ -124,13 +125,15 @@ export default function LiveActivity(): React.ReactNode {
                             {userAgentIsMobile ? <Drawer.Drawer>
                                 <Drawer.DrawerTrigger>
                                     <div className="group flex z-50 items-center bg-green-600 text-white p-2 rounded-full transition-all duration-1000">
-                                        <Image
-                                            className='rounded-full fa-spin'
-                                            src={jamData?.albumArt['small']}
-                                            alt="Album art"
-                                            width={24}
-                                            height={24}
-                                        /> 
+                                        <Link href='https://last.fm/user/t_ube'>
+                                            <Image
+                                                className='rounded-full fa-spin'
+                                                src={jamData?.albumArt['small']}
+                                                alt="Album art"
+                                                width={24}
+                                                height={24}
+                                            />
+                                        </Link>
                                     </div>
                                 </Drawer.DrawerTrigger>
                                 <Drawer.DrawerContent>
