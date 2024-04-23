@@ -125,7 +125,6 @@ export default function LiveActivity(): React.ReactNode {
                             {userAgentIsMobile ? <Drawer.Drawer>
                                 <Drawer.DrawerTrigger>
                                     <div className="group flex z-50 items-center bg-green-600 text-white p-2 rounded-full transition-all duration-1000">
-                                        <Link href='https://last.fm/user/t_ube'>
                                             <Image
                                                 className='rounded-full fa-spin'
                                                 src={jamData?.albumArt['small']}
@@ -133,7 +132,6 @@ export default function LiveActivity(): React.ReactNode {
                                                 width={24}
                                                 height={24}
                                             />
-                                        </Link>
                                     </div>
                                 </Drawer.DrawerTrigger>
                                 <Drawer.DrawerContent>
@@ -146,13 +144,15 @@ export default function LiveActivity(): React.ReactNode {
                                     <Drawer.DrawerDescription>
                                         <div className={["relative", i.className].join(' ')}>
                                             <div className={["mx-4 my-4 flex flex-col items-center justify-center", i.className].join(' ')}>
-                                                <Image
-                                                    className='rounded-lg'
-                                                    src={jamData?.albumArt['large'].replace('174s', '300x300')}
-                                                    alt="Album art"
-                                                    width={300}
-                                                    height={300}
-                                                />
+                                                <Link href='https://last.fm/user/t_ube'>
+                                                    <Image
+                                                        className='rounded-lg'
+                                                        src={jamData?.albumArt['large'].replace('174s', '300x300')}
+                                                        alt="Album art"
+                                                        width={300}
+                                                        height={300}
+                                                    />
+                                                </Link>
                                             </div>
                                         </div>
                                     </Drawer.DrawerDescription>
@@ -162,13 +162,15 @@ export default function LiveActivity(): React.ReactNode {
                                 </Drawer.DrawerContent>
                             </Drawer.Drawer> : <Tooltip.TooltipTrigger>
                                     <div className="group flex z-50 items-center bg-green-600 text-white p-2 rounded-full transition-all duration-1000">
-                                        <Image
-                                            className='rounded-full fa-spin'
-                                            src={jamData?.albumArt['small']}
-                                            alt="Album art"
-                                            width={24}
-                                            height={24}
-                                        /> 
+                                        <Link href='https://last.fm/user/t_ube'>
+                                            <Image
+                                                className='rounded-full fa-spin'
+                                                src={jamData?.albumArt['small']}
+                                                alt="Album art"
+                                                width={24}
+                                                height={24}
+                                            />
+                                        </Link>
                                     </div>
                                 </Tooltip.TooltipTrigger>}
                         <Tooltip.TooltipContent side='left'>
