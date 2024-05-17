@@ -3,6 +3,7 @@ import * as React from 'react'
 import { Inter } from 'next/font/google'
 import * as Drawer from "@/components/ui/drawer"
 import * as Tooltip from "@/components/ui/tooltip"
+import * as Menu from "@/components/ui/dropdown-menu"
 import Link from 'next/link'
 
 const socketUrl: string = process.env.NEXT_PUBLIC_SOCKET_URL || 'wss://nowplaying.martin.blue'
@@ -42,6 +43,10 @@ export default function LiveActivity(): React.ReactNode {
                 console.log('connected to socket')
             };
             s.onmessage = (event: any) => {
+                if (event.data === 'yes yes i am alive, keep displaying the data.') {
+                    console.log('ping successful')
+                    return
+                }
                 const data = JSON.parse(event.data)
                 setIsJamming(data.listening)    
                 setJamData(data.track)
@@ -144,7 +149,6 @@ export default function LiveActivity(): React.ReactNode {
                                     <Drawer.DrawerDescription>
                                         <div className={["relative", i.className].join(' ')}>
                                             <div className={["mx-4 my-4 flex flex-col items-center justify-center", i.className].join(' ')}>
-                                                <Link href='https://last.fm/user/t_ube'>
                                                     <Image
                                                         className='rounded-lg'
                                                         src={jamData?.albumArt['large'].replace('174s', '300x300')}
@@ -152,8 +156,23 @@ export default function LiveActivity(): React.ReactNode {
                                                         width={300}
                                                         height={300}
                                                     />
-                                                </Link>
                                             </div>
+                                        </div>
+                                        <Menu.DropdownMenuSeparator className='bg-black mt-6 mb-6 mx-10'/>
+                                        <div className='mx-14'>
+                                            <Link href='https://last.fm/user/t_ube'>
+                                                <button className='my-2 block px-4 py-2 border w-full rounded-xl hover:bg-gray-100'>
+                                                    me on last.fm
+                                                </button>
+                                            </Link>
+                                            <Link href='https://open.spotify.com/user/thetubekid'>
+                                                <button className='my-2 block px-4 py-2 border w-full rounded-xl hover:bg-gray-100'>
+                                                    me on spotify
+                                                </button>
+                                            </Link>
+                                            <button className='my-2 block px-4 py-2 border w-full rounded-xl text-[#aaaaaa]'>
+                                                current song links coming soon
+                                            </button>
                                         </div>
                                     </Drawer.DrawerDescription>
                                     <Drawer.DrawerFooter>
@@ -162,15 +181,38 @@ export default function LiveActivity(): React.ReactNode {
                                 </Drawer.DrawerContent>
                             </Drawer.Drawer> : <Tooltip.TooltipTrigger>
                                     <div className="group flex z-50 items-center bg-green-600 text-white p-2 rounded-full transition-all duration-1000">
-                                        <Link href='https://last.fm/user/t_ube'>
-                                            <Image
-                                                className='rounded-full fa-spin'
-                                                src={jamData?.albumArt['small']}
-                                                alt="Album art"
-                                                width={24}
-                                                height={24}
-                                            />
-                                        </Link>
+                                        <Menu.DropdownMenu>
+                                            <Menu.DropdownMenuTrigger>
+                                                <Image
+                                                    className='rounded-full fa-spin'
+                                                    src={jamData?.albumArt['small']}
+                                                    alt="Album art"
+                                                    width={24}
+                                                    height={24}
+                                                />
+                                            </Menu.DropdownMenuTrigger>
+                                            <Menu.DropdownMenuContent className={`w-65 border shadow-sm ${i.className}`}>
+                                                <Menu.DropdownMenuLabel>go to...</Menu.DropdownMenuLabel>
+                                                <Menu.DropdownMenuSeparator className='bg-black'/>
+                                                <Menu.DropdownMenuItem>
+
+                                                    <Link href='https://last.fm/user/t_ube' className='block px-4 py-2 hover:bg-gray-100'>
+                                                        me on last.fm
+                                                    </Link>
+                                                </Menu.DropdownMenuItem>
+                                                <Menu.DropdownMenuItem>
+                                                    <Link href='https://open.spotify.com/user/thetubekid' className='block px-4 py-2 hover:bg-gray-100'>
+                                                        me on spotify
+                                                    </Link>
+                                                </Menu.DropdownMenuItem>
+                                                <Menu.DropdownMenuSeparator className='bg-black'/>
+                                                <Menu.DropdownMenuItem disabled>
+                                                    <span className='block px-4 py-2 text-gray-400'>
+                                                        current song links coming soon
+                                                    </span>
+                                                </Menu.DropdownMenuItem>
+                                            </Menu.DropdownMenuContent>
+                                        </Menu.DropdownMenu>
                                     </div>
                                 </Tooltip.TooltipTrigger>}
                         <Tooltip.TooltipContent side='left'>
