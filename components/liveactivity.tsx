@@ -160,18 +160,24 @@ export default function LiveActivity(): React.ReactNode {
                                         </div>
                                         <Menu.DropdownMenuSeparator className='bg-black mt-6 mb-6 mx-10'/>
                                         <div className='mx-14'>
-                                            <Link href='https://last.fm/user/t_ube'>
+                                            <Link href='https://last.fm/user/t_ube' target='_blank'>
                                                 <button className='my-2 block px-4 py-2 border w-full rounded-xl hover:bg-gray-100'>
                                                     me on last.fm
                                                 </button>
                                             </Link>
-                                            <Link href='https://open.spotify.com/user/thetubekid'>
+                                            <Link href='https://open.spotify.com/user/thetubekid' target='_blank'>
                                                 <button className='my-2 block px-4 py-2 border w-full rounded-xl hover:bg-gray-100'>
                                                     me on spotify
                                                 </button>
                                             </Link>
-                                            <button className='my-2 block px-4 py-2 border w-full rounded-xl text-[#aaaaaa]'>
-                                                current song links coming soon
+                                            <Menu.DropdownMenuSeparator className='bg-black mt-6 mb-6 mx-4'/>
+                                            <Link href={jamData?.urls.lastfm} target='_blank'>
+                                                <button className='my-2 block px-4 py-2 border w-full rounded-xl hover:bg-gray-100'>
+                                                    song on last.fm
+                                                </button>
+                                            </Link>
+                                            <button className='my-2 block px-4 py-2 border w-full rounded-xl text-gray-400'>
+                                                spotify link coming soon
                                             </button>
                                         </div>
                                     </Drawer.DrawerDescription>
@@ -196,19 +202,24 @@ export default function LiveActivity(): React.ReactNode {
                                                 <Menu.DropdownMenuSeparator className='bg-black'/>
                                                 <Menu.DropdownMenuItem>
 
-                                                    <Link href='https://last.fm/user/t_ube' className='block px-4 py-2 hover:bg-gray-100'>
+                                                    <Link href='https://last.fm/user/t_ube' target='_blank' className='block px-4 py-2 hover:bg-gray-100'>
                                                         me on last.fm
                                                     </Link>
                                                 </Menu.DropdownMenuItem>
                                                 <Menu.DropdownMenuItem>
-                                                    <Link href='https://open.spotify.com/user/thetubekid' className='block px-4 py-2 hover:bg-gray-100'>
+                                                    <Link href='https://open.spotify.com/user/thetubekid' target='_blank' className='block px-4 py-2 hover:bg-gray-100'>
                                                         me on spotify
                                                     </Link>
                                                 </Menu.DropdownMenuItem>
                                                 <Menu.DropdownMenuSeparator className='bg-black'/>
+                                                <Menu.DropdownMenuItem>
+                                                    <Link href={jamData?.urls.lastfm} target='_blank' className='block px-4 py-2 hover:bg-gray-100'>
+                                                        song on last.fm
+                                                    </Link>
+                                                </Menu.DropdownMenuItem>
                                                 <Menu.DropdownMenuItem disabled>
                                                     <span className='block px-4 py-2 text-gray-400'>
-                                                        current song links coming soon
+                                                        spotify link coming soon
                                                     </span>
                                                 </Menu.DropdownMenuItem>
                                             </Menu.DropdownMenuContent>

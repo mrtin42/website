@@ -55,6 +55,11 @@ export default function Domains() {
             </Head>
             <Navbar active="domains" />
             <main className={styles.main}>
+                <div className="bg-red-600 rounded-md text-white m-2 p-2 w-[70%]">
+                    <p className="text-center font-sans">
+                        excuse the mess - this page is mid-redesign. expect a neater look once the exam season is over
+                    </p>
+                </div>
                 <header className={styles.header}>
                     <h1 className={[styles.title, "glitch"].join(" ")}>
                         <span aria-hidden="true">domains</span>
