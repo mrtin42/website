@@ -54,14 +54,15 @@ export default function LiveActivity(): React.ReactNode {
             s.onerror = (error: any) => {
                 console.error('[nowplaying.mbfrias.com] An error occurred:', error)
                 setIsJamming('error')
-                setJamData(null)
+                setJamData(null);
+                clearInterval(pingInt)
             }
 
             const ping = () => {
                 s.send('ba dum ba dum badum heartbeat')
             }
 
-            setInterval(ping, 15000) // keep the connection alive every 15 seconds
+            const pingInt = setInterval(ping, 15000) // keep the connection alive every 15 seconds
         }
         set(/Mobi|Android/i.test(navigator.userAgent))
         fetchData() // start the loop
@@ -133,7 +134,7 @@ export default function LiveActivity(): React.ReactNode {
                 <Tooltip.TooltipProvider>
                     <Tooltip.Tooltip delayDuration={0}>
                             {userAgentIsMobile ? <Drawer.Drawer>
-                                <Drawer.DrawerTrigger>
+                                <Drawer.DrawerTrigger disabled={isJamming == 'error'}>
                                     <div className={`group flex z-50 items-center ${isJamming == 'error' ? 'bg-red-600' : 'bg-green-600'} text-white p-2 rounded-full transition-all duration-1000`}>
                                             <Image
                                                 className='rounded-full fa-spin'
@@ -193,7 +194,7 @@ export default function LiveActivity(): React.ReactNode {
                             </Drawer.Drawer> : <Tooltip.TooltipTrigger>
                                     <div className={`group flex z-50 items-center ${isJamming == 'error' ? 'bg-red-600' : 'bg-green-600'} text-white p-2 rounded-full transition-all duration-1000`}>
                                         <Menu.DropdownMenu>
-                                            <Menu.DropdownMenuTrigger>
+                                            <Menu.DropdownMenuTrigger disabled={isJamming == 'error'}>
                                                 <Image
                                                     className='rounded-full fa-spin'
                                                     src={jamData?.albumArt['small']}
