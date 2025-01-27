@@ -28,7 +28,7 @@ export type NowListeningObject = {
 export default function LiveActivity(): React.ReactNode {
     // am i musicking??
     const [socket, setSocket] = React.useState<any>(null)
-    const [isJamming, setIsJamming] = React.useState<boolean>(false)
+    const [isJamming, setIsJamming] = React.useState<boolean | 'error'>(false)
     const [jamData, setJamData] = React.useState<any>(null)
     const [userAgentIsMobile, set] = React.useState(false)
     // ----------------
@@ -50,6 +50,11 @@ export default function LiveActivity(): React.ReactNode {
                 const data = JSON.parse(event.data)
                 setIsJamming(data.listening)    
                 setJamData(data.track)
+            };
+            s.onerror = (error: any) => {
+                console.error('[nowplaying.mbfrias.com] An error occurred:', error)
+                setIsJamming('error')
+                setJamData(null)
             }
 
             const ping = () => {
@@ -129,11 +134,11 @@ export default function LiveActivity(): React.ReactNode {
                     <Tooltip.Tooltip delayDuration={0}>
                             {userAgentIsMobile ? <Drawer.Drawer>
                                 <Drawer.DrawerTrigger>
-                                    <div className="group flex z-50 items-center bg-green-600 text-white p-2 rounded-full transition-all duration-1000">
+                                    <div className={`group flex z-50 items-center ${isJamming == 'error' ? 'bg-red-600' : 'bg-green-600'} text-white p-2 rounded-full transition-all duration-1000`}>
                                             <Image
                                                 className='rounded-full fa-spin'
                                                 src={jamData?.albumArt['small']}
-                                                alt="Album art"
+                                                alt={isJamming == 'error' ? '⚠️' : 'Album art'}
                                                 width={24}
                                                 height={24}
                                             />
@@ -186,13 +191,13 @@ export default function LiveActivity(): React.ReactNode {
                                     </Drawer.DrawerFooter>
                                 </Drawer.DrawerContent>
                             </Drawer.Drawer> : <Tooltip.TooltipTrigger>
-                                    <div className="group flex z-50 items-center bg-green-600 text-white p-2 rounded-full transition-all duration-1000">
+                                    <div className={`group flex z-50 items-center ${isJamming == 'error' ? 'bg-red-600' : 'bg-green-600'} text-white p-2 rounded-full transition-all duration-1000`}>
                                         <Menu.DropdownMenu>
                                             <Menu.DropdownMenuTrigger>
                                                 <Image
                                                     className='rounded-full fa-spin'
                                                     src={jamData?.albumArt['small']}
-                                                    alt="Album art"
+                                                    alt={isJamming == 'error' ? '⚠️' : 'Album art'}
                                                     width={24}
                                                     height={24}
                                                 />
@@ -228,9 +233,16 @@ export default function LiveActivity(): React.ReactNode {
                                 </Tooltip.TooltipTrigger>}
                         <Tooltip.TooltipContent side='left'>
                             <div className="flex items-center space-x-2">
-                                <p className="text-lg">
-                                    listening to <span className="font-bold">{jamData?.name}</span> by <span className="font-bold">{jamData?.artist}</span>
-                                </p>
+                                {isJamming == 'error' ? (
+                                    <p className="text-lg">
+                                        unable to fetch now playing data - check console for more info or try again later
+                                    </p>
+                                ) : (
+                                    <p className="text-lg">
+                                        listening to <span className="font-bold">{jamData?.name}</span> by <span className="font-bold">{jamData?.artist}</span>
+                                    </p>
+                                    )
+                                }
                             </div>
                         </Tooltip.TooltipContent>
                     </Tooltip.Tooltip>
