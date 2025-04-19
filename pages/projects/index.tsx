@@ -57,12 +57,6 @@ export default function Projects() {
                     <p className={styles.description}>i have made things and i think they're cool and you should check them out</p>
                 </header>
                 <div className={styles.grid}>
-                    <Box title="MLINX.co" className={boxStyles.card}>
-                        <p className={[styles.description].join(' ')}>
-                            <span className="bg-green-500 px-1 rounded-full">NEW</span>&nbsp;<span className="bg-red-600 px-1 rounded-full">BETA</span> A fantastically fantastic URL shortener that shortens URLs fantastically, with custom domains and everything (almost, i havent finished it yet but it's still cool!)
-                        </p>
-                        <Link href="https://mlinxapp.com" className={boxStyles.boxurl} target='_blank'>mlinx.co</Link>
-                    </Box>
                     <Box title="LondonTransit" className={boxStyles.card}>
                         <p className={styles.description}>A discord bot that provides information about the London, UK public transport system.</p>
                         <Link href="https://londontransit.org.uk" className={boxStyles.boxurl} target='_blank'>londontransit.org.uk</Link>
@@ -77,7 +71,7 @@ export default function Projects() {
                     </Box>
                     <Box title="MAЯTÍN" className={boxStyles.card}>
                         <p className={styles.description}>This website, made in Next.js and React. Adapted from its original form in raw HTML, CSS and JS.</p>
-                        <Link href="https://www.martin.blue" className={boxStyles.boxurl} target='_blank'>martin.blue</Link>
+                        <Link href="/" className={boxStyles.boxurl} target='_blank'>martin.blue</Link>
                     </Box>
                     {/* <Box title="Scriptables" className={boxStyles.card}>
                         <p className={styles.description}>A collection of scripts for the iOS app Scriptable.</p>
