@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 @import "tailwindcss";
 
@@ -116,7 +115,6 @@ nav {
 }
 
 .glitch-index {
-  font-family: 'Unbounded', sans-serif;
   font-weight: 900;
   z-index: 10;
   text-shadow: 0.05em 0 0 #02bfff, -0.03em -0.04em 0 #f229f8;

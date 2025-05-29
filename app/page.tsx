@@ -6,8 +6,14 @@ import { Roboto } from "next/font/google";
 import { useState } from 'react';
 import Navbar from "@/components/main/nav";
 import MusicStream from "@/components/stream/music";
+import { Unbounded } from "next/font/google";
+import { cn } from "@/utils";
 
 const r = Roboto({
+  subsets: ["latin"],
+})
+
+const u = Unbounded({
   subsets: ["latin"],
 })
 
@@ -33,7 +39,10 @@ export default function Home() {
             className="md:hidden"
           />
           <div className="relative">
-            <h1 className='glitch-index text-[3rem] md:text-[7rem]' aria-hidden>
+            <h1 className={cn(
+              "glitch-index text-[3rem] md:text-[7rem] font-bold",
+              u.className
+            )} aria-hidden>
               <span>MAЯTÍN</span>
               MAЯTÍN
               <span>MAЯTÍN</span>
