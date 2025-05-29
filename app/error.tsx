@@ -1,3 +1,5 @@
+'use client';
+
 import Navbar from "@/components/main/nav";
 import Link from "next/link";
 import { cn } from "@/utils";
