@@ -21,7 +21,7 @@ export const projects: Project[] = [
     title: "LondonTransit",
     description: "a comprehensive discord bot for information on transport for london services. written in javaScript with node.js and discord.js, it provides real-time updates on bus, tube, and train services, including live service status, station departures and disruptions. interacts directly with TfL's api to deliver accurate and timely information to users. londontransit was my first fully-fledged project, and it was (and still is) a great learning experience.",
     link: "https://londontransit.org.uk",
-    image: "https://londontransit.org.uk/assets/images/botlogo.svg",
+    image: "https://www.londontransit.org.uk/brand/lt.svg",
     repo: "https://github.com/mrtin42/londontransit",
     tags: ["discord", "bot", "transport", "tfl", "nodejs"],
     flags: ["active"],
