@@ -85,13 +85,13 @@ export default function Home() {
             <p>
               <strong>hi, i'm martin.</strong>
               <br /><br />
-              i'm a rail enthusiast and a javascript/typescript developer. i'm 17, born in chile and currently living in the united kingdom.
+              i'm a rail enthusiast and a javascript/typescript developer. i'm 18, born in chile and live in the united kingdom.
               <br /><br />
               i've been big into computers since i was well young, but never really got into programming until i was about 14 and it became part of my school curriculum. having started with python, i quickly moved on to javascript and typescript, and now i mainly work with react and next.js.
               <br /><br />
               i'm also proficient with node.js, and have made many simple servers and bots with it. i also have experience with express.js, and have made a few simple web apps with it.
               <br /><br />
-              my passion for the railways started the second i step foot in the country — the london underground fascinated me since young, and my enthusiasm has only grown since then. i trainspot quite often: i log my sightings on <a href="https://www.trainlogger.co.uk/" className="text-[#fcfcfc] hover:underline hover:underline-offset-4">trainlogger</a>. go check it out :p
+              my passion for the railways started the second i step foot in the country — the london underground fascinated me since young, and my enthusiasm has only grown since then. i trainspot quite often: i log my sightings on <a href="https://www.trainlogger.co.uk/tube" className="text-[#fcfcfc] hover:underline hover:underline-offset-4">trainlogger</a>. go check it out :p
             </p>
           </div>
           <div className="hidden md:flex md:flex-row">
@@ -144,19 +144,19 @@ export default function Home() {
           <div className={`text-[#fcfcfc] p-4 ${r.className} popout-text`}>
               <strong>my corners of the internet:</strong>
               <br /><br />
-              <a target="_blank" href="https://mbfr.me/twitter" className="text-[#fcfcfc] p-2 bg-[#08a0e9] hover:bg-[#0a8dd4] rounded-lg">twitter</a><br />
+              <a target="_blank" href="https://x.com/t_ub3" className="text-[#fcfcfc] p-2 bg-[#08a0e9] hover:bg-[#0a8dd4] rounded-lg">twitter</a><br />
               <p className="mt-4">where i complain about my country and stuff or something, i'm very opinionated</p>
               <hr className="my-4" />
-              <a target="_blank" href="https://mbfr.me/discord" className="text-[#fcfcfc] p-2 bg-[#5865F2] hover:bg-[#4752C4] rounded-lg">discord</a><br />
+              <a target="_blank" href="https://discord.com/users/488088713100918784" className="text-[#fcfcfc] p-2 bg-[#5865F2] hover:bg-[#4752C4] rounded-lg">discord</a><br />
               <p className="mt-4">where i talk to my friends and stuff, and also where i make cool bots and stuff</p>
               <hr className="my-4" />
-              <a target="_blank" href="https://mbfr.me/github" className="text-[#fcfcfc] p-2 bg-[#181717] hover:bg-[#0d0d0d] rounded-lg">github</a><br />
+              <a target="_blank" href="https://github.com/mrtin42" className="text-[#fcfcfc] p-2 bg-[#181717] hover:bg-[#0d0d0d] rounded-lg">github</a><br />
               <p className="mt-4">where i post my projects and stuff, self explanatory</p>
               <hr className="my-4" />
-              <a target="_blank" href="https://mbfr.me/instagram" className="text-[#fcfcfc] p-2 bg-[#E1306C] hover:bg-[#D62976] rounded-lg">instagram</a><br />
+              <a target="_blank" href="https://instagram.com/_md3v" className="text-[#fcfcfc] p-2 bg-[#E1306C] hover:bg-[#D62976] rounded-lg">instagram</a><br />
               <p className="mt-4">where i post my really cool photos of trains and stuff, and my go-to for doomscrolling</p>
               <hr className="my-4" />
-              <a target="_blank" href="https://mbfr.me/trainlogger" className="text-[#DFEBF5] p-2 bg-[#4A5F74] hover:bg-[#6e8ba9] rounded-lg">trainlogger</a><br />
+              <a target="_blank" href="https://trainlogger.co.uk/tube" className="text-[#DFEBF5] p-2 bg-[#4A5F74] hover:bg-[#6e8ba9] rounded-lg">trainlogger</a><br />
               <p className="mt-4">where i log my trainspotting sightings and post more photos than i do on instagram i like it</p>
           </div>
           <div className="hidden md:flex md:flex-row">

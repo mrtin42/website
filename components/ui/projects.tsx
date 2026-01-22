@@ -31,11 +31,11 @@ export const projects: Project[] = [
     title: "FORMALISER.net",
     description: "an extremely basic endpoint for html form submissions, allowing users to send data from forms to an email address written into the url. zero-setup, no database. written in javascript with node.js and express, it provides a simple solution for handling form submissions without the need for complex backend systems. unfortunately, it is frequently marked as spam by email providers and is consequently no longer worth maintaining, so it is not recommended for production use. it was honestly just a for fun project. don't use it.",
     link: "https://formaliser.net",
-    image: "https://formaliser.net/formaliser.svg",
+    image: null,
     repo: "https://github.com/mrtin42/formaliser.net",
     tags: ["form", "endpoint", "nodejs", "express"],
     flags: ["deprecated"],
-    displayFlags: ["titleInImage", "invertColours"]
+    displayFlags: ["invertColours"]
   },
   {
     title: "Last.fm Listening Streamer",
